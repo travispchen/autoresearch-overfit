@@ -12,8 +12,8 @@ This study measures the effect on tabular ML tasks from OpenML<sup>2</sup> with 
 
 Headline results:
 
-- **The basic autoresearch loop overfits to validation "wins" that do not show up on test.** Val improved +0.019; test moved −0.0006, indistinguishable from zero. The val−test gap is +0.020 (paired p = 0.001).
-- **Requiring a significant effect size to beat the validation noise floor fixes most of the problem.** Accepting only changes with Δval > 1·σ_val cuts the mean overfit gap to +0.005 (p = 0.004) and flips mean Δtest from −0.0006 to +0.003. The Δtest improvement alone is not significant at n = 15 (one-sided p = 0.06); the gap reduction is.
+- **The basic autoresearch loop overfits to validation "wins" that do not show up on test.** Val improved +0.019 while test moved essentially 0 (-0.0006) on average. The val−test gap is +0.020 (paired p = 0.001).
+- **Requiring a significant effect size to beat the validation noise floor fixes most of the problem.** Accepting only changes with Δval > 1·σ_val cuts the mean overfit gap to +0.005 (p = 0.004) and flips mean Δtest from −0.0006 to +0.003. The Δtest improvement alone is not significant at n = 15 (one-sided p = 0.06) but the gap reduction is.
 - **Asking the LLM to reflect on the source of overfitting did not help.** Showing the proposer train/val diagnostics and asking it to avoid likely noise wins produced gap +0.021 (p = 0.75) and Δtest −0.003, neither statistically different from the plain val-gate baseline.
 
 ## 2. Harness
@@ -22,7 +22,7 @@ Each of the 15 OpenML classification tasks runs as its own independent autoresea
 
 **Baseline.** An untuned `XGBClassifier` with library defaults. The file is deliberately thin, so there's lots of obvious room for the LLM to mutate (learning rate, depth, regularization, feature engineering, etc.).
 
-**Proposer.** One live Sonnet 4.5 call per experiment. Each turn the prompt is: a fixed system preamble naming the task, a rulebook listing what the agent may mutate (learning rate, depth, regularization, feature engineering, seed ensembles, etc.) and what it may not (split, prepare step, test slice), the current `train.py` in full, and the last 10 experiments as a compact history (index, status, `val_err`, the LLM's own one-line description).
+**Proposer.** One live Sonnet 4.5 call per experiment. Each turn the prompt is: a fixed system preamble naming the task, what the agent may and may not mutate (split, prepare step, test slice), the current `train.py` in full, and the last 10 experiments as a compact history (index, status, `val_err`, the LLM's own one-line description).
 
 **Val-gate.** Strict accept iff `val_err < best_val`. Kept proposals overwrite `train.py`, discarded ones are rolled back.
 
@@ -39,8 +39,6 @@ Each point is one task. The dashed diagonal is what honest progress looks like: 
 Averaged over 15 tasks: val descends as expected (blue), but test stays flat at zero (orange). The gap between the two curves is the adaptive-holdout overfit.
 
 ![per-task grid](./results/_summary/baseline/per_task_grid.png)
-
-Per-task trajectories. X = experiment index, Y = error rate. Solid blue = best val so far, solid orange = test at that val-winning experiment. When blue descends and orange stays flat or rises, that gap is the overfit.
 
 ### 3.1 Per-task summary
 
@@ -75,7 +73,7 @@ For example, an autoresearch user looking only at val would think they'd saved ~
 
 ### 3.3 Examples
 
-Experiments where the LLM proposed an edit, the val-gate accepted it, and the silent test log showed it made things worse. Top entries included:
+Below are examples experiments where the LLM proposed an edit, the val-gate accepted it, and the silent test log showed it made things worse:
 
 1. **`diabetes` i=5**, *"Set subsample=0.8 and colsample_bytree=0.8 to add stochastic regularization"*. Val −0.013, test +0.021 (test regressed 2.1pp, 1.6× larger than the val "gain"). Accepted.
 2. **`cmc` i=2**, *"Lower learning_rate to 0.1 to improve generalization with smaller gradient steps"*. Val −0.027, test +0.014.
@@ -83,11 +81,11 @@ Experiments where the LLM proposed an edit, the val-gate accepted it, and the si
 4. **`vehicle` i=9**, *"Add reg_alpha=1.0 for L1 regularization to encourage feature sparsity"*. Val −0.012, test +0.005.
 5. **`diabetes` i=12**, *"Set n_estimators=150 to allow more boosting iterations"*. Val −0.013, test +0.010.
 
-Although most of the accepted fixes looked reasonable, and none was as egregious as simply changing a random seed, the loop still encouraged a search over hyperparameters that overfit to val at the cost of generalization. For example the `diabetes` i=5 case is a textbook regularization edit that lowered val by 1.3% but made test 2.1% worse, so it was a "win" under the val-gate and a regression under ground truth.
+Although most of the accepted fixes looked reasonable and none were as egregious as simply changing a random seed, the loop still encouraged a search over hyperparameters that overfit to val at the cost of generalization. For example the `diabetes` i=5 case is a standard regularization edit that lowered val by 1.3% but made test 2.1% worse, so it was a "win" under the val-gate and a regression under ground truth.
 
 ## 4. Mitigations
 
-We experimented with the following mitigations to the overfitting problem.<sup>4</sup> We report a single representative setting per mitigation.<sup>5</sup> Significance tests throughout are paired Wilcoxon signed-rank at n = 15 tasks; the per-gate bootstrap CIs and raw test statistics live in `results/_summary/significance.json` in the repo (currently private).
+We experimented with the following mitigations to the overfitting problem.<sup>4</sup> We report a single representative setting per mitigation.<sup>5</sup> Significance tests throughout are paired Wilcoxon signed-rank at n = 15 tasks.
 
 | mitigation | what / why | cost |
 |---|---|---|
@@ -118,19 +116,17 @@ Summary table with paired Wilcoxon signed-rank tests (one-sided) on the per-task
 | thresholdout b = 10 | −0.15× | +0.019 | +0.001 | 43 | +0.018 | 0.327 | ✗ |
 | reflection | −0.94× | +0.018 | −0.003 | 40 | +0.021 | 0.747 | ✗ |
 
-Full per-task-per-gate breakdown is in `results/_summary/gate_comparison_table.json` in the repo (currently private).
-
 ### 4.2 Mitigation analysis
 
-Effect_size k = 1.0 is the cleanest mitigation. The gap flips from +0.020 to +0.005 (p = 0.004), mean Δtest flips from −0.0006 to +0.003, no task shows extreme overfit (v/t ≥ 3), and 21 of the 48 baseline keeps survive, the ones that beat the noise floor by at least 1σ. The tradeoff is that at n = 15 no gate significantly *improves* Δtest on its own; the gates stop val-gated runs from hurting test rather than making it notably better.
+**Effect_size k = 1.0** is the cleanest mitigation because it only accepts wins bigger than the estimated noise floor: gap +0.020 → +0.005 (p = 0.004), mean Δtest −0.0006 → +0.003, no extreme overfit, and 21/48 baseline keeps survive. At n = 15, it prevents val-gated runs from hurting test rather than significantly improving Δtest.
 
-Topk_confirm is nearly free and cuts the gap at p = 0.023. Keep count is unchanged since it's a post-hoc re-selection, not a gate. Run your greedy search, then make the final pick on a fresh internal holdout drawn from train+val.
+**Topk_confirm** is nearly free because it lets the greedy search over-explore val, then makes only the final choice on a fresh internal holdout from train+val. It cuts the gap at p = 0.023, with keep count unchanged because it re-selects post hoc.
 
-Rotating val (disjoint folds, gate decides on fold-val) lands at gap +0.018 (p = 0.040), marginally significant. The gate accepts ~2× more experiments (94 vs 48) because each per-fold val is smaller and noisier, so small folds hit low values by chance. A principled version resamples val from (train ∪ val) per experiment instead of partitioning a fixed val, but that breaks the "train is never touched" story. See §6.
+**Rotating val** tries to avoid repeatedly querying the same slice, but lands at gap +0.018 (p = 0.040), marginally significant, and accepts ~2× more experiments (94 vs 48) because smaller fold-val slices are noisier. Resampling val from (train ∪ val) per experiment would be cleaner, but breaks the "train is never touched" story. See §6.
 
-Thresholdout b = 10 did not help at p = 0.33. The reveal budget burns out in the first ~10 accepts; after that the agent is guessing and noise wins slip through the noisy reveal. Results are also sensitive to the Laplace noise scale.
+**Thresholdout b = 10** tries to spend a limited budget revealing true val only when noisy val looks promising, but did not help (p = 0.33): the budget burns out in the first ~10 accepts, then noise wins slip through. Results are also sensitive to the Laplace noise scale.
 
-Reflection did not reduce the gap (p = 0.75) and trended worse on Δtest (p = 0.17, one-sided). My guess is giving the model σ and "last win looks like noise" signals makes it *more* confident that its next plausible-sounding regularization edit is a real win.
+**Reflection** gives the model σ and "last win looks like noise" signals before it proposes the next edit, but did not reduce the gap (p = 0.75) and trended worse on Δtest (p = 0.17, one-sided). My guess: those warnings make it *more* confident its next plausible regularization edit is real.
 
 ## 5. Conclusion
 
@@ -138,11 +134,11 @@ Reflection did not reduce the gap (p = 0.75) and trended worse on Δtest (p = 0.
 
 The fix that worked was not asking the LLM to reason harder about overfitting, but making the gate less credulous. Requiring Δval > 1 · σ_val closed most of the val−test gap (p = 0.004). A post-hoc top-3 re-selection on a fresh internal holdout closed it further. Reflection, multi-seed averaging, and rotating val each either didn't help or came with costs that cancelled out the gains.
 
-**The effect-size gate is a five-line change at the accept/reject check: estimate σ_val once via a bootstrap of the val slice, then accept only if `val_err < best_val - k * sigma`.** That's it. No extra model fits in the hot loop, no budget bookkeeping, no prompt surgery. If you run autoresearch over many experiments on a fixed val set, do this.
+**The effect-size gate is a simple change at the accept/reject check: estimate σ_val once via a bootstrap of the val slice, then accept only if `val_err < best_val - k * sigma`.** No extra model fits in the hot loop, no budget bookkeeping, no prompt or context engineering. If you run autoresearch over many experiments on a fixed val set, do this.
 
 ## 6. Open questions
 
-25 experiments per task is short. Dwork's bounds predict the overfit gap grows roughly as log of the number of adaptive queries, so whether effect_size k = 1 still fixes the baseline at 200 experiments is an open question.
+25 experiments per task is short. Dwork's bounds<sup>1</sup> predict the overfit gap grows roughly as log of the number of adaptive queries, so whether effect_size k = 1 still fixes the baseline at 200 experiments is an open question.
 
 Does this generalize past tabular XGBoost classification? Other models and tasks have different stochasticity profiles and proposal spaces. The overfit-gap metric and the effect-size fix should port cleanly, but the magnitudes may not.
 

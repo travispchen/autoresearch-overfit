@@ -6,12 +6,7 @@ and [issue #131](https://github.com/karpathy/autoresearch/issues/131) on random-
 
 The full study is in **[WRITEUP.md](./WRITEUP.md)** — plots, numbers, and analysis.
 
-**TL;DR.** Claude Sonnet 4.5 edits `train.py` 25 times per task across 15 OpenML tabular
-classification tasks, with a strict val-gate as the accept/reject rule. The starting baseline is
-an untuned `XGBClassifier`. Across 375 LLM proposals, mean Δval is +0.019 (paired Wilcoxon
-p = 0.001) but mean Δtest is essentially zero (-0.0006). On 7 of the 12 tasks with any movement,
-val improves while test gets *worse*. Requiring `Δval > 1·σ_val` at the gate (effect-size gating)
-closes the val−test gap to +0.005 (p = 0.004) at the cost of fewer accepted experiments.
+**TL;DR.** Claude Sonnet 4.5 edits `train.py` 25 times per task across 15 OpenML tabular classification tasks, with a strict val-gate as the accept/reject rule. The starting baseline is an untuned `XGBClassifier`. Across 375 LLM proposals, mean Δval is +0.019 but mean Δtest is essentially zero (-0.0006). On 7 of the 12 tasks with any movement, val improves while test gets *worse*. Requiring `Δval > 1·σ_val` at the gate (effect-size gating) closes the val−test gap to +0.005 at the cost of fewer accepted experiments. In addition, re-scoring the run's top K champions on a fresh val resample and deploying whichever wins narrows the gap further. 
 
 ## Repo layout
 
@@ -78,8 +73,7 @@ every number and figure in the writeup from the cached per-proposal records.
 
 ## Datasets
 
-15 OpenML tabular classification tasks, version 1 of each:
-
+15 OpenML tabular classification tasks:
 ```
 credit-g, diabetes, kc1, phoneme, vehicle, wilt, spambase,
 mushroom, blood-transfusion-service-center, banknote-authentication,
@@ -90,18 +84,10 @@ Stratified 65/10/25 train/val/test split, fixed seed. Numeric NaNs filled with t
 categoricals one-hot encoded with the train vocabulary. No standard scaler — XGBoost is
 scale-invariant. `mushroom` and `banknote-authentication` are near-zero-error null controls.
 
-## Why XGBoost?
+## Baseline
 
 The baseline matters. If the starting point is already strong on tabular data, real
 improvements are small and rare, and most of the val-gate's accepted "wins" must either be
 (a) genuine but tiny gains or (b) noise-mining on the val slice. That is exactly the regime
 where adaptive holdout reuse bites. Untuned XGBoost is hard to beat on these tasks, which is
 the point.
-
-## XGBoost-specific leakage caveat
-
-`XGBClassifier` supports `eval_set=[(X_val, y_val)]` with `early_stopping_rounds=K`, which
-makes the val slice both the gate AND the early-stopping oracle — a compounded val-leak worse
-than the val-gate leak this study is measuring. Any agent proposal using it must prefix the
-description with `[es-on-val]` (~0 of 48 kept baseline proposals do, so it's negligible in
-practice for our budget).
