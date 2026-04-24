@@ -1,0 +1,236 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.060653188180404355,
+    "test_err": 0.09017412935323384,
+    "status": "keep",
+    "train_py_hash": "5c6bbfbf3f452335"
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 for better model capacity",
+    "train_err": 0.0,
+    "val_err": 0.05909797822706065,
+    "test_err": 0.08768656716417911,
+    "status": "keep",
+    "train_py_hash": "4e16956da3997456"
+  },
+  {
+    "i": 2,
+    "desc": "Increase max_depth from default 6 to 8 to allow deeper trees for better satimage feature interactions",
+    "train_err": 0.0,
+    "val_err": 0.060653188180404355,
+    "test_err": 0.0914179104477612,
+    "status": "discard",
+    "train_py_hash": "abae929a39741a1d"
+  },
+  {
+    "i": 3,
+    "desc": "Reduce learning_rate to 0.05 to allow the increased n_estimators to learn more carefully",
+    "train_err": 0.0,
+    "val_err": 0.06376360808709176,
+    "test_err": 0.08582089552238806,
+    "status": "discard",
+    "train_py_hash": "d108eea571c3d72e"
+  },
+  {
+    "i": 4,
+    "desc": "Add early stopping on validation set with 50 rounds to prevent overfitting with 300 estimators [es-on-val]",
+    "train_err": NaN,
+    "val_err": NaN,
+    "test_err": NaN,
+    "status": "error:SyntaxError: invalid syntax (<unknown>, line 46)",
+    "train_py_hash": "20c910271a75e17c"
+  },
+  {
+    "i": 5,
+    "desc": "Reduce learning_rate to 0.1 (from default 0.3) to better leverage the 300 estimators without overfitting",
+    "train_err": 0.0,
+    "val_err": 0.05754276827371695,
+    "test_err": 0.08768656716417911,
+    "status": "keep",
+    "train_py_hash": "0273d680a182c30a"
+  },
+  {
+    "i": 6,
+    "desc": "Increase max_depth to 7 to capture more complex patterns in satimage features",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08644278606965174,
+    "status": "keep",
+    "train_py_hash": "fc23e81636ca697c"
+  },
+  {
+    "i": 7,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 to introduce stochastic sampling and reduce overfitting",
+    "train_err": 0.0,
+    "val_err": 0.05754276827371695,
+    "test_err": 0.08146766169154229,
+    "status": "discard",
+    "train_py_hash": "3b9017b7983b2046"
+  },
+  {
+    "i": 8,
+    "desc": "Increase n_estimators from 300 to 500 to allow more boosting iterations",
+    "train_err": 0.0,
+    "val_err": 0.05443234836702955,
+    "test_err": 0.08768656716417911,
+    "status": "keep",
+    "train_py_hash": "ce4c5d3a8e14b0e0"
+  },
+  {
+    "i": 9,
+    "desc": "Add subsample=0.8 to introduce row-wise stochastic sampling and reduce overfitting risk with 500 trees",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08395522388059702,
+    "status": "discard",
+    "train_py_hash": "51aa7f48c7ebb1b0"
+  },
+  {
+    "i": 10,
+    "desc": "Increase max_depth from 7 to 8 to capture deeper interactions in satimage's spectral features",
+    "train_err": 0.0,
+    "val_err": 0.06220839813374806,
+    "test_err": 0.08893034825870647,
+    "status": "discard",
+    "train_py_hash": "55deb23c49ea9938"
+  },
+  {
+    "i": 11,
+    "desc": "Reduce learning_rate to 0.08 to allow the 500 estimators to learn more carefully and avoid overfitting",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08395522388059702,
+    "status": "discard",
+    "train_py_hash": "26fd0ae33e819126"
+  },
+  {
+    "i": 12,
+    "desc": "Add subsample=0.9 to introduce row sampling, providing regularization while maintaining most training data",
+    "train_err": 0.0,
+    "val_err": 0.05909797822706065,
+    "test_err": 0.08084577114427861,
+    "status": "discard",
+    "train_py_hash": "ccf389f6523db181"
+  },
+  {
+    "i": 13,
+    "desc": "Add colsample_bytree=0.8 to introduce feature sampling per tree, reducing overfitting across 500 trees",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08582089552238806,
+    "status": "discard",
+    "train_py_hash": "92db34eb41a201ae"
+  },
+  {
+    "i": 14,
+    "desc": "Add min_child_weight=3 to require more instances per leaf, providing regularization for the 500 trees",
+    "train_err": 0.0,
+    "val_err": 0.05443234836702955,
+    "test_err": 0.08830845771144279,
+    "status": "discard",
+    "train_py_hash": "5473257a77a7e4af"
+  },
+  {
+    "i": 15,
+    "desc": "Add colsample_bytree=0.9 to introduce mild feature sampling per tree for regularization",
+    "train_err": NaN,
+    "val_err": NaN,
+    "test_err": NaN,
+    "status": "error:SyntaxError: invalid syntax (<unknown>, line 43)",
+    "train_py_hash": "814b56dcb7eabe13"
+  },
+  {
+    "i": 16,
+    "desc": "Add reg_alpha=0.5 for L1 regularization to encourage feature sparsity in spectral bands",
+    "train_err": 0.0,
+    "val_err": 0.06220839813374806,
+    "test_err": 0.08208955223880597,
+    "status": "discard",
+    "train_py_hash": "a7b0ec6b2907362a"
+  },
+  {
+    "i": 17,
+    "desc": "Reduce max_depth from 7 to 6 to prevent overfitting with 500 estimators",
+    "train_err": 0.0,
+    "val_err": 0.05287713841368585,
+    "test_err": 0.08706467661691543,
+    "status": "keep",
+    "train_py_hash": "7c3698b07f2d99b8"
+  },
+  {
+    "i": 18,
+    "desc": "Add subsample=0.85 to introduce row sampling for regularization with 500 trees and max_depth=6",
+    "train_err": 0.0,
+    "val_err": 0.049766718506998445,
+    "test_err": 0.08146766169154229,
+    "status": "keep",
+    "train_py_hash": "be5906faae60b91a"
+  },
+  {
+    "i": 19,
+    "desc": "Add colsample_bytree=0.8 to introduce feature sampling per tree for additional regularization with subsample=0.85",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08395522388059702,
+    "status": "discard",
+    "train_py_hash": "676562b53f7a9758"
+  },
+  {
+    "i": 20,
+    "desc": "Add colsample_bylevel=0.9 to introduce column sampling at each tree level for additional regularization",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08519900497512438,
+    "status": "discard",
+    "train_py_hash": "f902b9f46e5a23dc"
+  },
+  {
+    "i": 21,
+    "desc": "Add min_child_weight=2 for mild leaf regularization to reduce overfitting with 500 trees",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08022388059701492,
+    "status": "discard",
+    "train_py_hash": "22bf0d6ad8d3a198"
+  },
+  {
+    "i": 22,
+    "desc": "Add colsample_bytree=0.9 to introduce mild feature sampling per tree for additional regularization with subsample=0.85",
+    "train_err": 0.0,
+    "val_err": 0.05909797822706065,
+    "test_err": 0.08208955223880597,
+    "status": "discard",
+    "train_py_hash": "74df10118fe2821e"
+  },
+  {
+    "i": 23,
+    "desc": "Add gamma=0.1 to require minimum loss reduction for splits, providing additional regularization with subsample=0.85",
+    "train_err": 0.0,
+    "val_err": 0.05598755832037325,
+    "test_err": 0.08146766169154229,
+    "status": "discard",
+    "train_py_hash": "2e869941a33314ed"
+  },
+  {
+    "i": 24,
+    "desc": "Reduce learning_rate from 0.1 to 0.05 to improve generalization with 500 estimators",
+    "train_err": 0.0,
+    "val_err": 0.05754276827371695,
+    "test_err": 0.08146766169154229,
+    "status": "discard",
+    "train_py_hash": "4975af565bebeb53"
+  },
+  {
+    "i": 25,
+    "desc": "Increase n_estimators from 500 to 700 to allow more boosting rounds with current conservative settings",
+    "train_err": 0.0,
+    "val_err": 0.05443234836702955,
+    "test_err": 0.08022388059701492,
+    "status": "discard",
+    "train_py_hash": "a87bc23aff363c30"
+  }
+]

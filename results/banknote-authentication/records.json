@@ -1,0 +1,236 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "keep",
+    "train_py_hash": "5c6bbfbf3f452335"
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 for better model capacity",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.011661807580174927,
+    "status": "discard",
+    "train_py_hash": "a9f4517bb161d9ca"
+  },
+  {
+    "i": 2,
+    "desc": "Increase max_depth from default 6 to 8 for deeper trees on this task",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "83ac9755c1604448"
+  },
+  {
+    "i": 3,
+    "desc": "Reduce learning_rate to 0.05 to improve generalization with more careful steps",
+    "train_err": 0.0,
+    "val_err": 0.014492753623188406,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "af5845bbc4cab1c1"
+  },
+  {
+    "i": 4,
+    "desc": "Increase n_estimators to 200 and reduce learning_rate to 0.1 for better generalization",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "f6787b2130fe0227"
+  },
+  {
+    "i": 5,
+    "desc": "Reduce learning_rate to 0.05 and increase n_estimators to 500 to improve generalization",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "14637bfa1c9792e2"
+  },
+  {
+    "i": 6,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 to reduce overfitting through feature/sample bagging",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.0029154518950437317,
+    "status": "discard",
+    "train_py_hash": "58b73e6b1cc1ea64"
+  },
+  {
+    "i": 7,
+    "desc": "Add min_child_weight=5 to increase regularization and reduce overfitting on this task",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.011661807580174927,
+    "status": "discard",
+    "train_py_hash": "dbc842db3778896f"
+  },
+  {
+    "i": 8,
+    "desc": "Add reg_alpha=1.0 for L1 regularization to reduce overfitting",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "dda301e82c0b546c"
+  },
+  {
+    "i": 9,
+    "desc": "Add scale_pos_weight to handle potential class imbalance in authentication dataset",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.0058309037900874635,
+    "status": "discard",
+    "train_py_hash": "02b58a164002d40b"
+  },
+  {
+    "i": 10,
+    "desc": "[es-on-val] Add early_stopping_rounds=10 with eval_set on validation to prevent overfitting",
+    "train_err": NaN,
+    "val_err": NaN,
+    "test_err": NaN,
+    "status": "runtime_error:train.py exit=1\nstdout:\n\nstderr:\nTraceback (most recent call last):\n  File \"<repo>",
+    "train_py_hash": "4ac13ad34012ceb7"
+  },
+  {
+    "i": 11,
+    "desc": "Switch tree_method to 'hist' for potentially better generalization on this dataset",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "e87a010520b87d28"
+  },
+  {
+    "i": 12,
+    "desc": "Increase n_estimators to 300 to allow more boosting rounds for refinement",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.011661807580174927,
+    "status": "discard",
+    "train_py_hash": "a9f4517bb161d9ca"
+  },
+  {
+    "i": 13,
+    "desc": "Reduce max_depth to 3 to create simpler trees and reduce overfitting",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.0,
+    "status": "discard",
+    "train_py_hash": "1550b6fdb91ee871"
+  },
+  {
+    "i": 14,
+    "desc": "Increase n_estimators to 1000 for more boosting iterations while keeping other defaults",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "2f22b94ef5a4ef3e"
+  },
+  {
+    "i": 15,
+    "desc": "Increase max_depth to 8 to allow more complex decision boundaries",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "83ac9755c1604448"
+  },
+  {
+    "i": 16,
+    "desc": "Reduce learning_rate to 0.01 and increase n_estimators to 500 for more gradual learning",
+    "train_err": 0.0,
+    "val_err": 0.014492753623188406,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "bc30563f8e1930a3"
+  },
+  {
+    "i": 17,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 for stochastic boosting to improve generalization",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.0029154518950437317,
+    "status": "discard",
+    "train_py_hash": "58b73e6b1cc1ea64"
+  },
+  {
+    "i": 18,
+    "desc": "Add colsample_bylevel=0.8 for per-level feature sampling instead of per-tree sampling",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.0058309037900874635,
+    "status": "discard",
+    "train_py_hash": "45dd265e258e4dbe"
+  },
+  {
+    "i": 19,
+    "desc": "Add reg_lambda=1.5 for L2 regularization to reduce overfitting",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "22f1c099539bed31"
+  },
+  {
+    "i": 20,
+    "desc": "Add min_child_weight=3 to increase minimum samples per leaf and reduce noise sensitivity",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "dbe90070e6e482c0"
+  },
+  {
+    "i": 21,
+    "desc": "Add reg_alpha=1.0 for L1 regularization to encourage feature selection and sparsity",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "dda301e82c0b546c"
+  },
+  {
+    "i": 22,
+    "desc": "[es-on-val] Add early_stopping_rounds=10 with eval_set on validation to find optimal iteration count",
+    "train_err": NaN,
+    "val_err": NaN,
+    "test_err": NaN,
+    "status": "runtime_error:train.py exit=1\nstdout:\n\nstderr:\nckages/xgboost/callback.py\", line 265, in after_iteration\n    score: str = model.eval_s",
+    "train_py_hash": "6b6765f5e3e2ea0a"
+  },
+  {
+    "i": 23,
+    "desc": "Add scale_pos_weight=2.0 to handle potential class imbalance in banknote authentication",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "38be9cb1e69c934b"
+  },
+  {
+    "i": 24,
+    "desc": "Set learning_rate=0.05 and n_estimators=300 for more gradual but thorough learning",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "396b97f686793f83"
+  },
+  {
+    "i": 25,
+    "desc": "Switch booster to 'dart' with rate_drop=0.1 to add dropout regularization to tree ensemble",
+    "train_err": 0.0,
+    "val_err": 0.007246376811594203,
+    "test_err": 0.008746355685131196,
+    "status": "discard",
+    "train_py_hash": "3d13c46ab75e4759"
+  }
+]

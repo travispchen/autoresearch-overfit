@@ -1,0 +1,252 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.06790123456790123,
+    "val_err": 0.22666666666666666,
+    "test_err": 0.23529411764705882,
+    "status": "keep",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 200 for potentially better convergence on this small dataset.",
+    "train_err": 0.05555555555555555,
+    "val_err": 0.2,
+    "test_err": 0.24598930481283424,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 2,
+    "desc": "Decrease learning_rate to 0.05 to allow more gradual fitting and potentially better generalization.",
+    "train_err": 0.11316872427983539,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.20320855614973263,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 3,
+    "desc": "Increase max_depth from default 6 to 4 for stronger regularization on this small dataset.",
+    "train_err": 0.1522633744855967,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.20320855614973263,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 4,
+    "desc": "Reduce max_depth to 3 for stronger regularization on this small tabular dataset.",
+    "train_err": 0.17695473251028807,
+    "val_err": 0.16,
+    "test_err": 0.18716577540106952,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 5,
+    "desc": "Increase n_estimators to 300 to allow more iterations at the low learning_rate of 0.05 for better convergence.",
+    "train_err": 0.17078189300411523,
+    "val_err": 0.21333333333333335,
+    "test_err": 0.20320855614973263,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 6,
+    "desc": "Increase subsample to 0.8 to introduce row sampling regularization which can help reduce overfitting.",
+    "train_err": 0.16872427983539096,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.1925133689839572,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 7,
+    "desc": "Add min_child_weight=5 to increase regularization and reduce overfitting on this small dataset.",
+    "train_err": 0.19753086419753085,
+    "val_err": 0.2,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 8,
+    "desc": "Add colsample_bytree=0.8 to introduce feature sampling regularization for this small dataset.",
+    "train_err": 0.1728395061728395,
+    "val_err": 0.18666666666666668,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 9,
+    "desc": "Add subsample=0.7 to introduce row-based regularization which may help on this small dataset.",
+    "train_err": 0.16666666666666666,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 10,
+    "desc": "Add colsample_bytree=0.8 to introduce feature sampling regularization alongside the existing subsample.",
+    "train_err": 0.17695473251028807,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.18716577540106952,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 11,
+    "desc": "Add colsample_bytree=0.9 to introduce mild feature sampling regularization alongside existing subsample.",
+    "train_err": 0.17695473251028807,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.18716577540106952,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 12,
+    "desc": "Add reg_alpha=0.5 to introduce L1 regularization which can help with feature selection and reduce overfitting.",
+    "train_err": 0.1748971193415638,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 13,
+    "desc": "Add reg_lambda=1.0 to introduce L2 regularization which can help reduce overfitting on this small dataset.",
+    "train_err": 0.16666666666666666,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 14,
+    "desc": "Increase n_estimators to 250 to allow more boosting iterations at the current learning rate for better convergence.",
+    "train_err": 0.15432098765432098,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.18716577540106952,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 15,
+    "desc": "Reduce max_depth to 2 to create simpler trees that may generalize better on this small dataset.",
+    "train_err": 0.19958847736625515,
+    "val_err": 0.18666666666666668,
+    "test_err": 0.1711229946524064,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 16,
+    "desc": "Reduce learning_rate to 0.03 and increase n_estimators to 300 for more gradual learning on this small dataset.",
+    "train_err": 0.16666666666666666,
+    "val_err": 0.16,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 17,
+    "desc": "Add gamma=0.1 to introduce minimum loss reduction required for splits, helping prevent overfitting on this small dataset.",
+    "train_err": 0.16255144032921812,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.1925133689839572,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 18,
+    "desc": "Add min_child_weight=3 to require more samples per leaf node, helping reduce overfitting on this small dataset.",
+    "train_err": 0.17901234567901234,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.21390374331550802,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 19,
+    "desc": "Add scale_pos_weight='balanced' equivalent calculation to handle potential class imbalance in blood donation data.",
+    "train_err": 0.20987654320987653,
+    "val_err": 0.25333333333333335,
+    "test_err": 0.23529411764705882,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 21,
+    "desc": "Add colsample_bylevel=0.8 for per-level feature sampling, a different regularization mechanism than per-tree sampling.",
+    "train_err": 0.1728395061728395,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.20320855614973263,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 22,
+    "desc": "Add colsample_bytree=0.8 for per-tree feature sampling to reduce tree correlation and improve generalization.",
+    "train_err": 0.17695473251028807,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.18716577540106952,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 23,
+    "desc": "Reduce subsample to 0.6 for more aggressive bagging on this small dataset.",
+    "train_err": 0.17695473251028807,
+    "val_err": 0.16,
+    "test_err": 0.1925133689839572,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 24,
+    "desc": "Add reg_alpha=0.5 for L1 regularization to help with feature selection on potentially correlated features.",
+    "train_err": 0.1748971193415638,
+    "val_err": 0.17333333333333334,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  },
+  {
+    "i": 25,
+    "desc": "Add reg_lambda=1.0 for L2 regularization to reduce overfitting on this small dataset.",
+    "train_err": 0.16666666666666666,
+    "val_err": 0.14666666666666667,
+    "test_err": 0.19786096256684493,
+    "status": "discard",
+    "best_val_after": 0.22666666666666666,
+    "best_test_after": 0.23529411764705882
+  }
+]

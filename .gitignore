@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.ruff_cache/
+*.npz
+*.log
+
+# Agent artifacts that get regenerated on each run.
+results.tsv
+.autoresearch_state.json
+
+# Matplotlib cache
+.matplotlib/
+
+# Run logs and large caches (keep records/plots/summaries under results/)
+results/*/run.log
+results/*/results.tsv
+results/*/eval_cache.json
+results/*/*/eval_cache.json
+.sigma_work/

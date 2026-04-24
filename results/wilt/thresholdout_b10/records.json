@@ -1,0 +1,252 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.02066115702479339,
+    "test_err": 0.012396694214876033,
+    "status": "keep",
+    "best_val_after": 0.02066115702479339,
+    "best_test_after": 0.012396694214876033
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators to 200 from default 100 to allow more boosting rounds",
+    "train_err": 0.0,
+    "val_err": 0.02066115702479339,
+    "test_err": 0.013223140495867768,
+    "status": "discard",
+    "best_val_after": 0.02066115702479339,
+    "best_test_after": 0.012396694214876033
+  },
+  {
+    "i": 2,
+    "desc": "Set max_depth=5 to limit tree complexity and reduce overfitting on this task",
+    "train_err": 0.0,
+    "val_err": 0.022727272727272728,
+    "test_err": 0.01487603305785124,
+    "status": "discard",
+    "best_val_after": 0.02066115702479339,
+    "best_test_after": 0.012396694214876033
+  },
+  {
+    "i": 3,
+    "desc": "Reduce learning_rate to 0.05 to allow finer gradient steps and potentially better convergence",
+    "train_err": 0.0038155802861685214,
+    "val_err": 0.01859504132231405,
+    "test_err": 0.013223140495867768,
+    "status": "discard",
+    "best_val_after": 0.02066115702479339,
+    "best_test_after": 0.012396694214876033
+  },
+  {
+    "i": 4,
+    "desc": "Increase n_estimators to 300 and reduce learning_rate to 0.03 for slower, more granular learning",
+    "train_err": 0.0012718600953895071,
+    "val_err": 0.01859504132231405,
+    "test_err": 0.01487603305785124,
+    "status": "keep",
+    "best_val_after": 0.01859504132231405,
+    "best_test_after": 0.01487603305785124
+  },
+  {
+    "i": 5,
+    "desc": "Increase n_estimators to 150 to add more boosting capacity while keeping the reduced learning_rate of 0.05",
+    "train_err": 0.0022257551669316376,
+    "val_err": 0.01859504132231405,
+    "test_err": 0.01487603305785124,
+    "status": "discard",
+    "best_val_after": 0.01859504132231405,
+    "best_test_after": 0.01487603305785124
+  },
+  {
+    "i": 6,
+    "desc": "Add subsample=0.8 to introduce row sampling and reduce overfitting",
+    "train_err": 0.004133545310015898,
+    "val_err": 0.01652892561983471,
+    "test_err": 0.013223140495867768,
+    "status": "discard",
+    "best_val_after": 0.01859504132231405,
+    "best_test_after": 0.01487603305785124
+  },
+  {
+    "i": 7,
+    "desc": "Add colsample_bytree=0.8 to introduce feature sampling and further reduce overfitting",
+    "train_err": 0.0034976152623211448,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.01652892561983471,
+    "status": "keep",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 8,
+    "desc": "Add reg_alpha=0.1 to introduce L1 regularization and reduce overfitting",
+    "train_err": 0.0038155802861685214,
+    "val_err": 0.014462809917355372,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 9,
+    "desc": "Increase n_estimators to 200 to give the reduced learning_rate more boosting rounds with current regularization",
+    "train_err": 0.0012718600953895071,
+    "val_err": 0.01652892561983471,
+    "test_err": 0.015702479338842976,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 10,
+    "desc": "Add min_child_weight=3 to require more instances per leaf and reduce overfitting",
+    "train_err": 0.006677265500794912,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.01487603305785124,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 11,
+    "desc": "Increase max_depth to 7 to allow slightly more complex trees while maintaining current regularization",
+    "train_err": 0.002861685214626391,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 12,
+    "desc": "Add colsample_bylevel=0.8 to introduce per-level feature sampling for additional regularization",
+    "train_err": 0.004133545310015898,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 13,
+    "desc": "Increase n_estimators to 150 to give more boosting rounds for the reduced learning_rate of 0.05",
+    "train_err": 0.0022257551669316376,
+    "val_err": 0.014462809917355372,
+    "test_err": 0.015702479338842976,
+    "status": "discard",
+    "best_val_after": 0.012396694214876033,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 14,
+    "desc": "Increase max_depth to 8 to allow more complex trees for capturing nuanced patterns",
+    "train_err": 0.003179650238473768,
+    "val_err": 0.010330578512396695,
+    "test_err": 0.01652892561983471,
+    "status": "keep",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 15,
+    "desc": "Add gamma=0.1 to require minimum loss reduction for splits and reduce overfitting",
+    "train_err": 0.0034976152623211448,
+    "val_err": 0.010330578512396695,
+    "test_err": 0.017355371900826446,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 16,
+    "desc": "Add colsample_bylevel=0.7 to introduce per-level feature sampling for additional regularization",
+    "train_err": 0.0038155802861685214,
+    "val_err": 0.010330578512396695,
+    "test_err": 0.01818181818181818,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 17,
+    "desc": "Increase n_estimators to 150 to give more boosting rounds for learning_rate=0.05",
+    "train_err": 0.0019077901430842607,
+    "val_err": 0.014462809917355372,
+    "test_err": 0.01487603305785124,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 18,
+    "desc": "Add reg_lambda=1.0 to introduce L2 regularization and potentially reduce overfitting",
+    "train_err": 0.003179650238473768,
+    "val_err": 0.010330578512396695,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 19,
+    "desc": "Increase n_estimators to 125 to allow more boosting rounds for learning_rate=0.05",
+    "train_err": 0.0025437201907790143,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.015702479338842976,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 20,
+    "desc": "Increase n_estimators to 200 to give more boosting rounds for the reduced learning_rate of 0.05",
+    "train_err": 0.0012718600953895071,
+    "val_err": 0.01652892561983471,
+    "test_err": 0.015702479338842976,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 21,
+    "desc": "Add min_child_weight=3 to require more samples per leaf and reduce overfitting",
+    "train_err": 0.006359300476947536,
+    "val_err": 0.014462809917355372,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 22,
+    "desc": "Add min_child_weight=1 to slightly reduce leaf sample requirement while maintaining regularization",
+    "train_err": 0.003179650238473768,
+    "val_err": 0.010330578512396695,
+    "test_err": 0.01652892561983471,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 23,
+    "desc": "Increase subsample to 0.9 to provide more training data per tree while maintaining bagging regularization",
+    "train_err": 0.003179650238473768,
+    "val_err": 0.01652892561983471,
+    "test_err": 0.01818181818181818,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  },
+  {
+    "i": 24,
+    "desc": "Add colsample_bynode=0.8 to introduce per-split feature sampling for additional regularization",
+    "train_err": 0.0034976152623211448,
+    "val_err": 0.012396694214876033,
+    "test_err": 0.017355371900826446,
+    "status": "discard",
+    "best_val_after": 0.010330578512396695,
+    "best_test_after": 0.01652892561983471
+  }
+]

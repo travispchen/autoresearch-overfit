@@ -1,0 +1,236 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.24,
+    "test_err": 0.204,
+    "status": "keep",
+    "train_py_hash": "5c6bbfbf3f452335"
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 for more boosting rounds",
+    "train_err": 0.0,
+    "val_err": 0.24,
+    "test_err": 0.212,
+    "status": "discard",
+    "train_py_hash": "4e16956da3997456"
+  },
+  {
+    "i": 2,
+    "desc": "Reduce max_depth from default 6 to 3 to prevent overfitting on this relatively small dataset",
+    "train_err": 0.018461538461538463,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "keep",
+    "train_py_hash": "1550b6fdb91ee871"
+  },
+  {
+    "i": 3,
+    "desc": "Increase n_estimators to 200 to allow more boosting iterations with the shallower trees",
+    "train_err": 0.0015384615384615385,
+    "val_err": 0.22,
+    "test_err": 0.208,
+    "status": "discard",
+    "train_py_hash": "4b06f97407300357"
+  },
+  {
+    "i": 4,
+    "desc": "Lower learning_rate to 0.05 to make boosting more conservative with shallower trees",
+    "train_err": 0.14615384615384616,
+    "val_err": 0.22,
+    "test_err": 0.224,
+    "status": "discard",
+    "train_py_hash": "8baaf3c360466c0e"
+  },
+  {
+    "i": 5,
+    "desc": "Increase subsample to 0.8 to introduce row sampling and reduce overfitting",
+    "train_err": 0.024615384615384615,
+    "val_err": 0.27,
+    "test_err": 0.232,
+    "status": "discard",
+    "train_py_hash": "c519eab1d32e6225"
+  },
+  {
+    "i": 6,
+    "desc": "Increase min_child_weight to 3 to require more samples per leaf and reduce overfitting",
+    "train_err": 0.038461538461538464,
+    "val_err": 0.26,
+    "test_err": 0.236,
+    "status": "discard",
+    "train_py_hash": "3f9453e3fee3d02d"
+  },
+  {
+    "i": 7,
+    "desc": "Increase colsample_bytree to 0.8 to subsample features per tree and reduce overfitting",
+    "train_err": 0.026153846153846153,
+    "val_err": 0.22,
+    "test_err": 0.228,
+    "status": "discard",
+    "train_py_hash": "736021b9e7c5ce6e"
+  },
+  {
+    "i": 8,
+    "desc": "Increase n_estimators to 200 while keeping max_depth=3 to allow more boosting rounds with shallow trees",
+    "train_err": 0.0015384615384615385,
+    "val_err": 0.22,
+    "test_err": 0.208,
+    "status": "discard",
+    "train_py_hash": "4b06f97407300357"
+  },
+  {
+    "i": 9,
+    "desc": "Add L2 regularization by setting reg_lambda=1.0 to reduce overfitting",
+    "train_err": 0.018461538461538463,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "discard",
+    "train_py_hash": "eede95270566edd1"
+  },
+  {
+    "i": 10,
+    "desc": "Increase n_estimators to 150 to allow more boosting rounds with shallow trees (max_depth=3)",
+    "train_err": 0.007692307692307693,
+    "val_err": 0.23,
+    "test_err": 0.204,
+    "status": "discard",
+    "train_py_hash": "aa774c82fed493be"
+  },
+  {
+    "i": 11,
+    "desc": "Set learning_rate=0.2 to slightly increase the step size while keeping shallow trees (max_depth=3)",
+    "train_err": 0.04923076923076923,
+    "val_err": 0.24,
+    "test_err": 0.228,
+    "status": "discard",
+    "train_py_hash": "f3f4cca32cc1a5b4"
+  },
+  {
+    "i": 12,
+    "desc": "Increase colsample_bylevel to 0.7 to subsample features per level and improve generalization",
+    "train_err": 0.027692307692307693,
+    "val_err": 0.25,
+    "test_err": 0.228,
+    "status": "discard",
+    "train_py_hash": "cabb218a017c3422"
+  },
+  {
+    "i": 13,
+    "desc": "Increase max_depth to 4 to allow slightly more complex tree splits while maintaining regularization",
+    "train_err": NaN,
+    "val_err": NaN,
+    "test_err": NaN,
+    "status": "error:SyntaxError: invalid syntax (<unknown>, line 40)",
+    "train_py_hash": "3aa907c11e2d00c1"
+  },
+  {
+    "i": 14,
+    "desc": "Increase max_depth to 4 and set min_child_weight=2 to allow more complex trees with regularization",
+    "train_err": 0.0015384615384615385,
+    "val_err": 0.28,
+    "test_err": 0.24,
+    "status": "discard",
+    "train_py_hash": "f897e7d226754673"
+  },
+  {
+    "i": 15,
+    "desc": "Enable native categorical handling with tree_method=hist and enable_categorical=True",
+    "train_err": 0.018461538461538463,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "discard",
+    "train_py_hash": "be544236e51eccd6"
+  },
+  {
+    "i": 16,
+    "desc": "Set subsample=0.8 to use row subsampling per tree and improve generalization",
+    "train_err": 0.024615384615384615,
+    "val_err": 0.27,
+    "test_err": 0.232,
+    "status": "discard",
+    "train_py_hash": "c519eab1d32e6225"
+  },
+  {
+    "i": 17,
+    "desc": "Set learning_rate=0.05 to slow down learning and potentially reduce overfitting with shallow trees",
+    "train_err": 0.14615384615384616,
+    "val_err": 0.22,
+    "test_err": 0.224,
+    "status": "discard",
+    "train_py_hash": "8baaf3c360466c0e"
+  },
+  {
+    "i": 18,
+    "desc": "Set min_child_weight=3 to require more samples per leaf and reduce overfitting",
+    "train_err": 0.038461538461538464,
+    "val_err": 0.26,
+    "test_err": 0.236,
+    "status": "discard",
+    "train_py_hash": "3f9453e3fee3d02d"
+  },
+  {
+    "i": 19,
+    "desc": "Increase n_estimators to 200 to allow more boosting iterations with shallow trees",
+    "train_err": 0.0015384615384615385,
+    "val_err": 0.22,
+    "test_err": 0.208,
+    "status": "discard",
+    "train_py_hash": "4b06f97407300357"
+  },
+  {
+    "i": 20,
+    "desc": "Set reg_alpha=0.5 to add L1 regularization and encourage feature sparsity",
+    "train_err": 0.03538461538461538,
+    "val_err": 0.22,
+    "test_err": 0.212,
+    "status": "discard",
+    "train_py_hash": "187417e188bf2817"
+  },
+  {
+    "i": 21,
+    "desc": "Set reg_lambda=1.0 to add L2 regularization and reduce overfitting with shallow trees",
+    "train_err": 0.018461538461538463,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "discard",
+    "train_py_hash": "eede95270566edd1"
+  },
+  {
+    "i": 22,
+    "desc": "Set learning_rate=0.1 and n_estimators=300 to make smaller but more numerous updates",
+    "train_err": 0.027692307692307693,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "discard",
+    "train_py_hash": "3549e856a54ddaee"
+  },
+  {
+    "i": 23,
+    "desc": "Set colsample_bytree=0.8 to use feature subsampling per tree and reduce overfitting",
+    "train_err": 0.026153846153846153,
+    "val_err": 0.22,
+    "test_err": 0.228,
+    "status": "discard",
+    "train_py_hash": "736021b9e7c5ce6e"
+  },
+  {
+    "i": 24,
+    "desc": "Switch booster to 'dart' for dropout-based regularization during boosting",
+    "train_err": 0.018461538461538463,
+    "val_err": 0.22,
+    "test_err": 0.216,
+    "status": "discard",
+    "train_py_hash": "f1b66ae3e77c0d29"
+  },
+  {
+    "i": 25,
+    "desc": "Set max_depth=5 to allow deeper trees that can capture more complex feature interactions",
+    "train_err": 0.0,
+    "val_err": 0.26,
+    "test_err": 0.232,
+    "status": "discard",
+    "train_py_hash": "7d8c5a42162cbcb0"
+  }
+]

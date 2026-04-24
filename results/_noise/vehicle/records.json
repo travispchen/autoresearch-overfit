@@ -1,0 +1,452 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "keep",
+    "train_py_hash": "5c6bbfbf3f452335"
+  },
+  {
+    "i": 1,
+    "desc": "lr=0.1, n_estimators=300",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "4096b8bd14944782"
+  },
+  {
+    "i": 2,
+    "desc": "lr=0.05, n_estimators=500",
+    "train_err": 0.0,
+    "val_err": 0.16470588235294117,
+    "test_err": 0.25471698113207547,
+    "status": "discard",
+    "train_py_hash": "5245bd97364b25ac"
+  },
+  {
+    "i": 3,
+    "desc": "max_depth=4, n_estimators=300",
+    "train_err": 0.0,
+    "val_err": 0.18823529411764706,
+    "test_err": 0.24056603773584906,
+    "status": "discard",
+    "train_py_hash": "abd033a3b83178e3"
+  },
+  {
+    "i": 4,
+    "desc": "subsample=0.8, colsample_bytree=0.8",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.2358490566037736,
+    "status": "discard",
+    "train_py_hash": "806b7ce9d1567a28"
+  },
+  {
+    "i": 5,
+    "desc": "min_child_weight=3",
+    "train_err": 0.0,
+    "val_err": 0.16470588235294117,
+    "test_err": 0.25,
+    "status": "discard",
+    "train_py_hash": "49fe16fccd52fdf3"
+  },
+  {
+    "i": 6,
+    "desc": "seed-swap: random_state=1",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "81a75037a462d3ca"
+  },
+  {
+    "i": 7,
+    "desc": "seed-swap: random_state=2",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "1dab77d088a99588"
+  },
+  {
+    "i": 8,
+    "desc": "seed-swap: random_state=3",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "83b75477a2ad2885"
+  },
+  {
+    "i": 9,
+    "desc": "seed-swap: random_state=4",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "8723f5d183c7a6f7"
+  },
+  {
+    "i": 10,
+    "desc": "seed-swap: random_state=5",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "6a85a8e91f5b7eb0"
+  },
+  {
+    "i": 11,
+    "desc": "seed-swap: random_state=6",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "f4c0cb51cd15c11d"
+  },
+  {
+    "i": 12,
+    "desc": "seed-swap: random_state=7",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "866b6f0f76e7a81b"
+  },
+  {
+    "i": 13,
+    "desc": "seed-swap: random_state=8",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "a73997e7d18c449c"
+  },
+  {
+    "i": 14,
+    "desc": "seed-swap: random_state=9",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "6b0e948822616f87"
+  },
+  {
+    "i": 15,
+    "desc": "seed-swap: random_state=10",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "f90c1637aca13a2d"
+  },
+  {
+    "i": 16,
+    "desc": "seed-swap: random_state=11",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "fac85de0aa842c3a"
+  },
+  {
+    "i": 17,
+    "desc": "seed-swap: random_state=12",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "bb2c706c5a95e9b7"
+  },
+  {
+    "i": 18,
+    "desc": "seed-swap: random_state=13",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "9cc5486f66098f87"
+  },
+  {
+    "i": 19,
+    "desc": "seed-swap: random_state=14",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "59a7acdeaddabc70"
+  },
+  {
+    "i": 20,
+    "desc": "seed-swap: random_state=15",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "02117d482739de80"
+  },
+  {
+    "i": 21,
+    "desc": "seed-swap: random_state=16",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "09702f138d19c2ab"
+  },
+  {
+    "i": 22,
+    "desc": "seed-swap: random_state=17",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "b1a5dc85ba3551cf"
+  },
+  {
+    "i": 23,
+    "desc": "seed-swap: random_state=18",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "85539a9b0f49d510"
+  },
+  {
+    "i": 24,
+    "desc": "seed-swap: random_state=19",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "5b3f03a0d177e254"
+  },
+  {
+    "i": 25,
+    "desc": "seed-swap: random_state=20",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "20a3d52a442b697f"
+  },
+  {
+    "i": 26,
+    "desc": "seed-swap: random_state=21",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "5049d0ced6d1ebed"
+  },
+  {
+    "i": 27,
+    "desc": "seed-swap: random_state=22",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "aeebb1e537277420"
+  },
+  {
+    "i": 28,
+    "desc": "seed-swap: random_state=23",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "209cf88bb10884dd"
+  },
+  {
+    "i": 29,
+    "desc": "seed-swap: random_state=24",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "e4dd726bceb60206"
+  },
+  {
+    "i": 30,
+    "desc": "seed-swap: random_state=25",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "7db65230d40229d6"
+  },
+  {
+    "i": 31,
+    "desc": "seed-swap: random_state=26",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "f6788c0138b69c4c"
+  },
+  {
+    "i": 32,
+    "desc": "seed-swap: random_state=27",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "8c890cba6d0199ea"
+  },
+  {
+    "i": 33,
+    "desc": "seed-swap: random_state=28",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "f7c13e325faaa373"
+  },
+  {
+    "i": 34,
+    "desc": "seed-swap: random_state=29",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "76c3d22010f1b0aa"
+  },
+  {
+    "i": 35,
+    "desc": "seed-swap: random_state=30",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "5c04d40978900c04"
+  },
+  {
+    "i": 36,
+    "desc": "seed-swap: random_state=31",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "1af70e7dda9eb635"
+  },
+  {
+    "i": 37,
+    "desc": "seed-swap: random_state=32",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "74d1fd106465cd85"
+  },
+  {
+    "i": 38,
+    "desc": "seed-swap: random_state=33",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "9bd2cf8fcf3228d9"
+  },
+  {
+    "i": 39,
+    "desc": "seed-swap: random_state=34",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "dd5d5f6cb382b1ce"
+  },
+  {
+    "i": 40,
+    "desc": "seed-swap: random_state=35",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "2245d60a24b2049b"
+  },
+  {
+    "i": 41,
+    "desc": "seed-swap: random_state=36",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "351085afc0b9e2e1"
+  },
+  {
+    "i": 42,
+    "desc": "seed-swap: random_state=37",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "fc0737f7284928d6"
+  },
+  {
+    "i": 43,
+    "desc": "seed-swap: random_state=38",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "6922829910eb4fb9"
+  },
+  {
+    "i": 44,
+    "desc": "seed-swap: random_state=39",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "56ccfdf950c8b07e"
+  },
+  {
+    "i": 45,
+    "desc": "seed-swap: random_state=40",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "390407d73a81962f"
+  },
+  {
+    "i": 46,
+    "desc": "seed-swap: random_state=41",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "339e4a3fd8152f45"
+  },
+  {
+    "i": 47,
+    "desc": "seed-swap: random_state=42",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "b6fa5b750aaa1fd1"
+  },
+  {
+    "i": 48,
+    "desc": "seed-swap: random_state=43",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "6d608d22c78ffe84"
+  },
+  {
+    "i": 49,
+    "desc": "seed-swap: random_state=44",
+    "train_err": 0.0,
+    "val_err": 0.15294117647058825,
+    "test_err": 0.24528301886792453,
+    "status": "discard",
+    "train_py_hash": "e01c0c49adecb637"
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "n_boot": 2000,
+  "per_task": {
+    "credit-g": {
+      "baseline_val_err": 0.24,
+      "baseline_test_err": 0.204,
+      "bootstrap_val_std": 0.042564572668161625,
+      "bootstrap_test_std": 0.0251102629745952,
+      "edit_stream_val_std": 0.020641873861685603,
+      "n_val": 100,
+      "n_test": 250
+    },
+    "diabetes": {
+      "baseline_val_err": 0.23376623376623376,
+      "baseline_test_err": 0.2552083333333333,
+      "bootstrap_val_std": 0.047696530192445664,
+      "bootstrap_test_std": 0.032660901885959395,
+      "edit_stream_val_std": 0.018790073085896707,
+      "n_val": 77,
+      "n_test": 192
+    },
+    "kc1": {
+      "baseline_val_err": 0.14218009478672985,
+      "baseline_test_err": 0.13825757575757575,
+      "bootstrap_val_std": 0.0241256185428373,
+      "bootstrap_test_std": 0.014892534095562808,
+      "edit_stream_val_std": 0.010945028799803332,
+      "n_val": 211,
+      "n_test": 528
+    },
+    "phoneme": {
+      "baseline_val_err": 0.12754158964879853,
+      "baseline_test_err": 0.0999259807549963,
+      "bootstrap_val_std": 0.014605685109760454,
+      "bootstrap_test_std": 0.008426215392921215,
+      "edit_stream_val_std": 0.004775922811320082,
+      "n_val": 541,
+      "n_test": 1351
+    },
+    "vehicle": {
+      "baseline_val_err": 0.15294117647058825,
+      "baseline_test_err": 0.24528301886792453,
+      "bootstrap_val_std": 0.03951971481358101,
+      "bootstrap_test_std": 0.029127143086253873,
+      "edit_stream_val_std": 0.02152013458992921,
+      "n_val": 85,
+      "n_test": 212
+    },
+    "wilt": {
+      "baseline_val_err": 0.02066115702479339,
+      "baseline_test_err": 0.012396694214876033,
+      "bootstrap_val_std": 0.006558373831176628,
+      "bootstrap_test_std": 0.0031933791209330428,
+      "edit_stream_val_std": 0.003525275298203142,
+      "n_val": 484,
+      "n_test": 1210
+    },
+    "spambase": {
+      "baseline_val_err": 0.041304347826086954,
+      "baseline_test_err": 0.05039096437880104,
+      "bootstrap_val_std": 0.009288503825794185,
+      "bootstrap_test_std": 0.006312234281429469,
+      "edit_stream_val_std": 0.0046189860269255836,
+      "n_val": 460,
+      "n_test": 1151
+    },
+    "mushroom": {
+      "baseline_val_err": 0.0,
+      "baseline_test_err": 0.0,
+      "bootstrap_val_std": 0.0,
+      "bootstrap_test_std": 0.0,
+      "edit_stream_val_std": 0.0010881325177483183,
+      "n_val": 813,
+      "n_test": 2031
+    },
+    "blood-transfusion-service-center": {
+      "baseline_val_err": 0.22666666666666666,
+      "baseline_test_err": 0.23529411764705882,
+      "bootstrap_val_std": 0.048401132233320744,
+      "bootstrap_test_std": 0.031889692662316,
+      "edit_stream_val_std": 0.02673903224521464,
+      "n_val": 75,
+      "n_test": 187
+    },
+    "banknote-authentication": {
+      "baseline_val_err": 0.007246376811594203,
+      "baseline_test_err": 0.008746355685131196,
+      "bootstrap_val_std": 0.007214737606992189,
+      "bootstrap_test_std": 0.004971637741864809,
+      "edit_stream_val_std": 0.002087710619710365,
+      "n_val": 138,
+      "n_test": 343
+    },
+    "splice": {
+      "baseline_val_err": 0.047021943573667714,
+      "baseline_test_err": 0.03508771929824561,
+      "bootstrap_val_std": 0.011568378956386393,
+      "bootstrap_test_std": 0.0064341196033859405,
+      "edit_stream_val_std": 0.004884185806927357,
+      "n_val": 319,
+      "n_test": 798
+    },
+    "segment": {
+      "baseline_val_err": 0.017316017316017316,
+      "baseline_test_err": 0.025951557093425604,
+      "bootstrap_val_std": 0.008381260879406762,
+      "bootstrap_test_std": 0.0065380378170884585,
+      "edit_stream_val_std": 0.004822725945460286,
+      "n_val": 231,
+      "n_test": 578
+    },
+    "satimage": {
+      "baseline_val_err": 0.060653188180404355,
+      "baseline_test_err": 0.09017412935323384,
+      "bootstrap_val_std": 0.009358714157523484,
+      "bootstrap_test_std": 0.00720721086713033,
+      "edit_stream_val_std": 0.003195320258284544,
+      "n_val": 643,
+      "n_test": 1608
+    },
+    "mfeat-factors": {
+      "baseline_val_err": 0.05,
+      "baseline_test_err": 0.038,
+      "bootstrap_val_std": 0.015258957791947922,
+      "bootstrap_test_std": 0.008260254954052748,
+      "edit_stream_val_std": 0.007798991945265673,
+      "n_val": 200,
+      "n_test": 500
+    },
+    "cmc": {
+      "baseline_val_err": 0.5135135135135135,
+      "baseline_test_err": 0.45528455284552843,
+      "bootstrap_val_std": 0.04227629073318777,
+      "bootstrap_test_std": 0.025899033641043418,
+      "edit_stream_val_std": 0.015197879922041427,
+      "n_val": 148,
+      "n_test": 369
+    },
+    "rapm_2024": {
+      "baseline_val_err": 1.1952193538764462,
+      "baseline_test_err": 1.1915795237325655,
+      "bootstrap_val_std": 0.002893071247698844,
+      "bootstrap_test_std": 0.001823704541205434,
+      "edit_stream_val_std": 0.0004026001949603057,
+      "n_val": 24517,
+      "n_test": 61292
+    }
+  }
+}

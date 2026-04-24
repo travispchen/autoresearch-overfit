@@ -1,0 +1,252 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.05039096437880104,
+    "status": "keep",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 for more boosting rounds",
+    "train_err": 0.0006688963210702341,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.04952215464813206,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 2,
+    "desc": "Increase max_depth from default 6 to 8 for deeper trees on this feature-rich dataset",
+    "train_err": 0.001003344481605351,
+    "val_err": 0.04565217391304348,
+    "test_err": 0.044309296264118156,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 3,
+    "desc": "Reduce learning_rate to 0.05 and set n_estimators to 200 for more gradual boosting",
+    "train_err": 0.015384615384615385,
+    "val_err": 0.05,
+    "test_err": 0.052128583840139006,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 4,
+    "desc": "Set max_depth=4 and increase n_estimators=500 to build shallower, more numerous trees",
+    "train_err": 0.0006688963210702341,
+    "val_err": 0.04565217391304348,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 5,
+    "desc": "Set subsample=0.8 and colsample_bytree=0.8 to add regularization via row/column sampling",
+    "train_err": 0.002006688963210702,
+    "val_err": 0.04782608695652174,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 6,
+    "desc": "Set min_child_weight=3 and gamma=0.1 to add regularization and prune small splits",
+    "train_err": 0.004013377926421404,
+    "val_err": 0.05434782608695652,
+    "test_err": 0.052997393570807995,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 7,
+    "desc": "Set learning_rate=0.1 and n_estimators=200 for slightly more gradual training than default",
+    "train_err": 0.005016722408026756,
+    "val_err": 0.04782608695652174,
+    "test_err": 0.04865334491746308,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 8,
+    "desc": "Set max_depth=7 and colsample_bytree=0.9 for slightly more capacity with mild regularization",
+    "train_err": 0.0013377926421404682,
+    "val_err": 0.04565217391304348,
+    "test_err": 0.05039096437880104,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 9,
+    "desc": "Add scale_pos_weight to handle potential class imbalance in spam classification",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.05217391304347826,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 10,
+    "desc": "Set reg_alpha=0.1 for L1 regularization to reduce overfitting on spam features",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.043478260869565216,
+    "test_err": 0.05039096437880104,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 11,
+    "desc": "Set max_depth=5 and n_estimators=150 for slightly shallower trees with moderate boosting rounds",
+    "train_err": 0.0013377926421404682,
+    "val_err": 0.05652173913043478,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 12,
+    "desc": "Standardize features using StandardScaler to normalize different feature scales in spambase",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.05039096437880104,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 13,
+    "desc": "Set reg_lambda=1.0 for L2 regularization to reduce overfitting",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.05039096437880104,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 15,
+    "desc": "Set max_depth=4 and n_estimators=150 to reduce tree depth for better generalization",
+    "train_err": 0.0030100334448160534,
+    "val_err": 0.043478260869565216,
+    "test_err": 0.04691572545612511,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 16,
+    "desc": "Set n_estimators=300 to allow more boosting rounds for learning spam patterns",
+    "train_err": 0.0006688963210702341,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.04952215464813206,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 17,
+    "desc": "Set subsample=0.8 and colsample_bytree=0.8 to add stochastic sampling regularization",
+    "train_err": 0.002006688963210702,
+    "val_err": 0.04782608695652174,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 18,
+    "desc": "Set learning_rate=0.05 and n_estimators=200 for slower, more gradual learning",
+    "train_err": 0.015384615384615385,
+    "val_err": 0.05,
+    "test_err": 0.052128583840139006,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 19,
+    "desc": "Set colsample_bynode=0.8 for per-node feature sampling regularization",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.046046915725456126,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 20,
+    "desc": "Set max_depth=8 and n_estimators=200 for deeper trees to capture complex spam patterns",
+    "train_err": 0.0006688963210702341,
+    "val_err": 0.043478260869565216,
+    "test_err": 0.046046915725456126,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 21,
+    "desc": "Set min_child_weight=3 to require more samples per leaf, reducing overfitting on spam patterns",
+    "train_err": 0.0036789297658862876,
+    "val_err": 0.05217391304347826,
+    "test_err": 0.05560382276281494,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 22,
+    "desc": "Enable histogram tree method with enable_categorical=True for better feature binning on spambase",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.041304347826086954,
+    "test_err": 0.05039096437880104,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 23,
+    "desc": "Set scale_pos_weight based on class ratio to handle potential spam/ham imbalance",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.05217391304347826,
+    "test_err": 0.04778453518679409,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 24,
+    "desc": "Set reg_alpha=1.0 to add L1 regularization for feature selection on spambase's 57 features",
+    "train_err": 0.0033444816053511705,
+    "val_err": 0.043478260869565216,
+    "test_err": 0.052997393570807995,
+    "status": "discard",
+    "best_val_after": 0.041304347826086954,
+    "best_test_after": 0.05039096437880104
+  },
+  {
+    "i": 25,
+    "desc": "Set reg_lambda=5.0 and n_estimators=150 to add L2 regularization while allowing more boosting rounds",
+    "train_err": 0.0016722408026755853,
+    "val_err": 0.04782608695652174,
+    "test_err": 0.044309296264118156,
+    "status": "keep",
+    "best_val_after": 0.04782608695652174,
+    "best_test_after": 0.044309296264118156
+  }
+]

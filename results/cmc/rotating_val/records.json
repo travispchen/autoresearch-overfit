@@ -1,0 +1,242 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.05439330543933055,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.45528455284552843,
+    "status": "keep",
+    "best_val_after": 0.5135135135135135,
+    "best_test_after": 0.45528455284552843
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 to allow more boosting iterations",
+    "train_err": 0.028242677824267783,
+    "val_err": 0.5337837837837838,
+    "test_err": 0.4959349593495935,
+    "status": "keep",
+    "best_val_after": 0.5135135135135135,
+    "best_test_after": 0.45528455284552843
+  },
+  {
+    "i": 2,
+    "desc": "Lower learning_rate to 0.1 to improve generalization with smaller gradient steps",
+    "train_err": 0.17468619246861924,
+    "val_err": 0.4864864864864865,
+    "test_err": 0.46883468834688347,
+    "status": "keep",
+    "best_val_after": 0.4864864864864865,
+    "best_test_after": 0.46883468834688347
+  },
+  {
+    "i": 3,
+    "desc": "Increase max_depth from default 6 to 4 to reduce overfitting on this task",
+    "train_err": 0.2928870292887029,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.4254742547425474,
+    "status": "discard",
+    "best_val_after": 0.4864864864864865,
+    "best_test_after": 0.46883468834688347
+  },
+  {
+    "i": 4,
+    "desc": "Increase n_estimators to 200 and set max_depth to 5 to balance complexity and generalization",
+    "train_err": 0.1401673640167364,
+    "val_err": 0.5067567567567568,
+    "test_err": 0.4742547425474255,
+    "status": "discard",
+    "best_val_after": 0.4864864864864865,
+    "best_test_after": 0.46883468834688347
+  },
+  {
+    "i": 5,
+    "desc": "Increase n_estimators to 200 for more boosting rounds with the lower learning_rate",
+    "train_err": 0.08891213389121339,
+    "val_err": 0.49324324324324326,
+    "test_err": 0.4905149051490515,
+    "status": "discard",
+    "best_val_after": 0.4864864864864865,
+    "best_test_after": 0.46883468834688347
+  },
+  {
+    "i": 7,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 to reduce overfitting through feature and row subsampling",
+    "train_err": 0.11192468619246862,
+    "val_err": 0.49324324324324326,
+    "test_err": 0.46612466124661245,
+    "status": "discard",
+    "best_val_after": 0.4864864864864865,
+    "best_test_after": 0.46883468834688347
+  },
+  {
+    "i": 8,
+    "desc": "Add reg_alpha=1.0 for L1 regularization to reduce overfitting and improve generalization",
+    "train_err": 0.18619246861924685,
+    "val_err": 0.4797297297297297,
+    "test_err": 0.47696476964769646,
+    "status": "keep",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 9,
+    "desc": "Add reg_lambda=1.0 for L2 regularization to complement existing L1 regularization",
+    "train_err": 0.18619246861924685,
+    "val_err": 0.4797297297297297,
+    "test_err": 0.47696476964769646,
+    "status": "keep",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 10,
+    "desc": "Increase n_estimators to 200 with existing regularization to allow more boosting iterations",
+    "train_err": 0.12238493723849372,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.45799457994579945,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 11,
+    "desc": "Increase n_estimators to 150 to allow more boosting rounds while maintaining regularization",
+    "train_err": 0.14225941422594143,
+    "val_err": 0.4864864864864865,
+    "test_err": 0.4634146341463415,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 12,
+    "desc": "Increase reg_alpha to 2.0 to strengthen L1 regularization and reduce overfitting further",
+    "train_err": 0.24686192468619247,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.46883468834688347,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 13,
+    "desc": "Increase learning_rate to 0.3 to allow faster convergence and potentially escape local minima",
+    "train_err": 0.08577405857740586,
+    "val_err": 0.4797297297297297,
+    "test_err": 0.4796747967479675,
+    "status": "keep",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 14,
+    "desc": "Set max_depth=4 to limit tree complexity and reduce overfitting on this task",
+    "train_err": 0.30857740585774057,
+    "val_err": 0.5067567567567568,
+    "test_err": 0.43902439024390244,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 15,
+    "desc": "Set max_depth=5 to moderately reduce tree complexity and overfitting",
+    "train_err": 0.252092050209205,
+    "val_err": 0.5,
+    "test_err": 0.4634146341463415,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 16,
+    "desc": "Set colsample_bytree=0.8 to reduce feature subsampling and prevent overfitting on this task",
+    "train_err": 0.20188284518828453,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.4444444444444444,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 17,
+    "desc": "Set min_child_weight=3 to require more samples per leaf and reduce overfitting",
+    "train_err": 0.24163179916317992,
+    "val_err": 0.5,
+    "test_err": 0.4742547425474255,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 18,
+    "desc": "Set subsample=0.8 to reduce overfitting through row subsampling on each boosting iteration",
+    "train_err": 0.1506276150627615,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.4715447154471545,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 19,
+    "desc": "Set learning_rate=0.05 and n_estimators=200 for slower, more gradual learning",
+    "train_err": 0.1903765690376569,
+    "val_err": 0.5,
+    "test_err": 0.4796747967479675,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 20,
+    "desc": "Reduce reg_alpha to 0.5 to allow slightly more model flexibility while maintaining regularization",
+    "train_err": 0.1694560669456067,
+    "val_err": 0.5135135135135135,
+    "test_err": 0.47696476964769646,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 21,
+    "desc": "Set learning_rate=0.05 and n_estimators=150 for slower learning with more boosting rounds",
+    "train_err": 0.22384937238493724,
+    "val_err": 0.527027027027027,
+    "test_err": 0.4823848238482385,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 23,
+    "desc": "Remove reg_alpha parameter to use XGBoost default (0.0) instead of 1.0",
+    "train_err": 0.17468619246861924,
+    "val_err": 0.4864864864864865,
+    "test_err": 0.46883468834688347,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 24,
+    "desc": "Set n_estimators=150 to allow more boosting rounds for better learning capacity",
+    "train_err": 0.14225941422594143,
+    "val_err": 0.4864864864864865,
+    "test_err": 0.4634146341463415,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  },
+  {
+    "i": 25,
+    "desc": "Set reg_lambda=2.0 to add stronger L2 regularization alongside the current L1 regularization",
+    "train_err": 0.21652719665271966,
+    "val_err": 0.5,
+    "test_err": 0.4742547425474255,
+    "status": "discard",
+    "best_val_after": 0.4797297297297297,
+    "best_test_after": 0.47696476964769646
+  }
+]

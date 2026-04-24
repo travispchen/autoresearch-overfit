@@ -1,0 +1,452 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.013868613138686132,
+    "val_err": 0.14218009478672985,
+    "test_err": 0.13825757575757575,
+    "status": "keep",
+    "train_py_hash": "5c6bbfbf3f452335"
+  },
+  {
+    "i": 1,
+    "desc": "lr=0.1, n_estimators=300",
+    "train_err": 0.013868613138686132,
+    "val_err": 0.16113744075829384,
+    "test_err": 0.12878787878787878,
+    "status": "discard",
+    "train_py_hash": "4096b8bd14944782"
+  },
+  {
+    "i": 2,
+    "desc": "lr=0.05, n_estimators=500",
+    "train_err": 0.016058394160583942,
+    "val_err": 0.14691943127962084,
+    "test_err": 0.14015151515151514,
+    "status": "discard",
+    "train_py_hash": "5245bd97364b25ac"
+  },
+  {
+    "i": 3,
+    "desc": "max_depth=4, n_estimators=300",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "keep",
+    "train_py_hash": "abd033a3b83178e3"
+  },
+  {
+    "i": 4,
+    "desc": "subsample=0.8, colsample_bytree=0.8",
+    "train_err": 0.013868613138686132,
+    "val_err": 0.15165876777251186,
+    "test_err": 0.14015151515151514,
+    "status": "discard",
+    "train_py_hash": "806b7ce9d1567a28"
+  },
+  {
+    "i": 5,
+    "desc": "min_child_weight=3",
+    "train_err": 0.022627737226277374,
+    "val_err": 0.14218009478672985,
+    "test_err": 0.12878787878787878,
+    "status": "discard",
+    "train_py_hash": "49fe16fccd52fdf3"
+  },
+  {
+    "i": 6,
+    "desc": "seed-swap: random_state=1",
+    "train_err": 0.049635036496350364,
+    "val_err": 0.14218009478672985,
+    "test_err": 0.14015151515151514,
+    "status": "discard",
+    "train_py_hash": "95342cd7a959934a"
+  },
+  {
+    "i": 7,
+    "desc": "seed-swap: random_state=2",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "c0ccd44b4a2e7a21"
+  },
+  {
+    "i": 8,
+    "desc": "seed-swap: random_state=3",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "02059b7063a9c31c"
+  },
+  {
+    "i": 9,
+    "desc": "seed-swap: random_state=4",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "0c8c939c00862ea4"
+  },
+  {
+    "i": 10,
+    "desc": "seed-swap: random_state=5",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "29563beca9cdfade"
+  },
+  {
+    "i": 11,
+    "desc": "seed-swap: random_state=6",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "710341e7f1771d0a"
+  },
+  {
+    "i": 12,
+    "desc": "seed-swap: random_state=7",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "6915e29c1fcd329b"
+  },
+  {
+    "i": 13,
+    "desc": "seed-swap: random_state=8",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "cff4c0bb325387b8"
+  },
+  {
+    "i": 14,
+    "desc": "seed-swap: random_state=9",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "8ac5d8a33b564aec"
+  },
+  {
+    "i": 15,
+    "desc": "seed-swap: random_state=10",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "4f310540e61de58c"
+  },
+  {
+    "i": 16,
+    "desc": "seed-swap: random_state=11",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "c712a4d3784270ab"
+  },
+  {
+    "i": 17,
+    "desc": "seed-swap: random_state=12",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "d6eb990f6da2ee50"
+  },
+  {
+    "i": 18,
+    "desc": "seed-swap: random_state=13",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "3695edbdb0bd5368"
+  },
+  {
+    "i": 19,
+    "desc": "seed-swap: random_state=14",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "72a7baf0e7948966"
+  },
+  {
+    "i": 20,
+    "desc": "seed-swap: random_state=15",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "c4edc74ed84f08d1"
+  },
+  {
+    "i": 21,
+    "desc": "seed-swap: random_state=16",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "11621eb1d706f2e6"
+  },
+  {
+    "i": 22,
+    "desc": "seed-swap: random_state=17",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "9ca12b8dbe4714eb"
+  },
+  {
+    "i": 23,
+    "desc": "seed-swap: random_state=18",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "85bda9b85227f928"
+  },
+  {
+    "i": 24,
+    "desc": "seed-swap: random_state=19",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "6f65b0a14abb5f1d"
+  },
+  {
+    "i": 25,
+    "desc": "seed-swap: random_state=20",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "838132f5d68bf365"
+  },
+  {
+    "i": 26,
+    "desc": "seed-swap: random_state=21",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "05f15c687f10089c"
+  },
+  {
+    "i": 27,
+    "desc": "seed-swap: random_state=22",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "08275b3fcf6c41a0"
+  },
+  {
+    "i": 28,
+    "desc": "seed-swap: random_state=23",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "e80a423b64b46d52"
+  },
+  {
+    "i": 29,
+    "desc": "seed-swap: random_state=24",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "7b3583bfade3f55d"
+  },
+  {
+    "i": 30,
+    "desc": "seed-swap: random_state=25",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "1266475e00550244"
+  },
+  {
+    "i": 31,
+    "desc": "seed-swap: random_state=26",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "b59147784d136a17"
+  },
+  {
+    "i": 32,
+    "desc": "seed-swap: random_state=27",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "e3d6e1f0c976567f"
+  },
+  {
+    "i": 33,
+    "desc": "seed-swap: random_state=28",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "5c70d5a544047e44"
+  },
+  {
+    "i": 34,
+    "desc": "seed-swap: random_state=29",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "1325e1e88441c7da"
+  },
+  {
+    "i": 35,
+    "desc": "seed-swap: random_state=30",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "a51d9e591df4e303"
+  },
+  {
+    "i": 36,
+    "desc": "seed-swap: random_state=31",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "4f3d34726e401fcf"
+  },
+  {
+    "i": 37,
+    "desc": "seed-swap: random_state=32",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "842dcb2dafb56813"
+  },
+  {
+    "i": 38,
+    "desc": "seed-swap: random_state=33",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "9a7ece73c70ff673"
+  },
+  {
+    "i": 39,
+    "desc": "seed-swap: random_state=34",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "c3a1aacb92170a18"
+  },
+  {
+    "i": 40,
+    "desc": "seed-swap: random_state=35",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "76f6602c45e0706f"
+  },
+  {
+    "i": 41,
+    "desc": "seed-swap: random_state=36",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "99e70d642ed126cf"
+  },
+  {
+    "i": 42,
+    "desc": "seed-swap: random_state=37",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "1bcc3da1736373d0"
+  },
+  {
+    "i": 43,
+    "desc": "seed-swap: random_state=38",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "f6131d84b1e69674"
+  },
+  {
+    "i": 44,
+    "desc": "seed-swap: random_state=39",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "52f92bde6254cdfa"
+  },
+  {
+    "i": 45,
+    "desc": "seed-swap: random_state=40",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "e022bc9bc83da885"
+  },
+  {
+    "i": 46,
+    "desc": "seed-swap: random_state=41",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "14f2575cdf0de216"
+  },
+  {
+    "i": 47,
+    "desc": "seed-swap: random_state=42",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "ef8f398171f32a11"
+  },
+  {
+    "i": 48,
+    "desc": "seed-swap: random_state=43",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "02765356a0b9c3d2"
+  },
+  {
+    "i": 49,
+    "desc": "seed-swap: random_state=44",
+    "train_err": 0.02408759124087591,
+    "val_err": 0.12796208530805686,
+    "test_err": 0.13636363636363635,
+    "status": "discard",
+    "train_py_hash": "c15792c06d2e4a4d"
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "i": 0,
+    "desc": "baseline",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "keep",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 1,
+    "desc": "Increase n_estimators from default 100 to 300 to allow more boosting rounds.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "keep",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 2,
+    "desc": "Reduce learning_rate to 0.05 to slow down boosting and potentially improve generalization.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "keep",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 3,
+    "desc": "Enable native categorical handling with tree_method=hist and enable_categorical=True for mushroom's categorical features.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "keep",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 4,
+    "desc": "Create a 3-model ensemble with different random seeds to improve robustness and potential generalization.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "keep",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 5,
+    "desc": "Increase max_depth from default 6 to 3 to reduce model complexity and potentially avoid overfitting on this task.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 6,
+    "desc": "Reduce max_depth to 2 and increase min_child_weight to 3 for stronger regularization.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 7,
+    "desc": "Set max_depth=1 (decision stumps) to test if even the simplest trees achieve perfect accuracy.",
+    "train_err": 0.000946969696969697,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 8,
+    "desc": "Reduce n_estimators to 50 to test if fewer boosting rounds maintain perfect accuracy.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 9,
+    "desc": "Switch booster from gbtree to dart to test dropout-regularized trees.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 10,
+    "desc": "Switch booster to gblinear to test if linear model achieves perfect accuracy.",
+    "train_err": 0.0,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 11,
+    "desc": "Add reg_lambda=1.0 for L2 regularization without changing other hyperparameters.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 12,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 for stochastic gradient boosting",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 13,
+    "desc": "Reduce learning_rate to 0.1 to test if slower learning maintains perfect accuracy.",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 14,
+    "desc": "Reduce n_estimators to 10 to find minimal boosting rounds for perfect accuracy",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 15,
+    "desc": "Reduce n_estimators to 5 to test minimal boosting rounds for perfect accuracy",
+    "train_err": 0.000946969696969697,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 17,
+    "desc": "Enable native categorical handling with tree_method=hist for efficient categorical feature processing",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 18,
+    "desc": "Increase max_depth to 10 and reduce n_estimators to 3 to test if deeper trees achieve perfect accuracy faster",
+    "train_err": 0.000946969696969697,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 19,
+    "desc": "Reduce n_estimators to 1 to test if single tree achieves perfect accuracy",
+    "train_err": 0.000946969696969697,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 20,
+    "desc": "Reduce n_estimators to 50 to improve training speed while maintaining perfect accuracy",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 21,
+    "desc": "Increase max_depth to 10 to capture more complex feature interactions",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 22,
+    "desc": "Switch to gblinear booster for faster linear classification on this perfectly separable task",
+    "train_err": 0.0,
+    "val_err": 0.0024600246002460025,
+    "test_err": 0.0004923682914820286,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 23,
+    "desc": "Add L2 regularization with reg_lambda=1.0 to potentially improve model robustness",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 24,
+    "desc": "Add subsample=0.8 and colsample_bytree=0.8 for stochastic regularization while maintaining perfect accuracy",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  },
+  {
+    "i": 25,
+    "desc": "Reduce learning_rate to 0.1 for more gradual boosting while maintaining perfect accuracy",
+    "train_err": 0.0,
+    "val_err": 0.0,
+    "test_err": 0.0,
+    "status": "discard",
+    "best_val_after": 0.0,
+    "best_test_after": 0.0
+  }
+]
