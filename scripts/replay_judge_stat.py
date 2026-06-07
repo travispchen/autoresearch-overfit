@@ -51,11 +51,14 @@ pressure inflates false positives (the best of many noisy trials looks good by l
 Estimate the probability that THIS improvement is real. Respond with ONLY this JSON, no fences:
 {"p_real": <float 0..1>, "reasoning": "<1-2 sentences>"}"""
 
-SYSTEM_HYBRID = SYSTEM_NOISE + """
+SYSTEM_HYBRID = (
+    SYSTEM_NOISE
+    + """
 
 You are ALSO given sigma_val: the standard deviation of this task's validation error under \
 bootstrap resampling of the validation set (the empirical noise floor). Compare the improvement \
 to sigma_val directly when judging."""
+)
 
 
 def build_user(ctx: dict, with_sigma: bool) -> str:
@@ -69,13 +72,17 @@ def build_user(ctx: dict, with_sigma: bool) -> str:
         f"change description: {ctx['desc']}",
     ]
     if with_sigma:
-        lines.append(f"sigma_val (bootstrap val-error std): {ctx['sigma']:.4f}  (Δval / sigma_val = {ctx['dval'] / ctx['sigma']:.2f})")
+        lines.append(
+            f"sigma_val (bootstrap val-error std): {ctx['sigma']:.4f}  (Δval / sigma_val = {ctx['dval'] / ctx['sigma']:.2f})"
+        )
     return "\n".join(lines)
 
 
 def ask(client: anthropic.Anthropic, system: str, user: str) -> dict:
     resp = client.messages.create(
-        model=MODEL, max_tokens=200, system=system,
+        model=MODEL,
+        max_tokens=200,
+        system=system,
         messages=[{"role": "user", "content": user}],
     )
     text = "".join(b.text for b in resp.content if getattr(b, "text", None)).strip()
@@ -91,8 +98,11 @@ def ask(client: anthropic.Anthropic, system: str, user: str) -> dict:
 def task_meta(task: str) -> dict:
     d = load_dataset(task)
     _, counts = np.unique(d.y_val, return_counts=True)
-    return {"n_val": int(len(d.y_val)), "n_classes": int(d.n_classes),
-            "majority_err": float(1 - counts.max() / len(d.y_val))}
+    return {
+        "n_val": int(len(d.y_val)),
+        "n_classes": int(d.n_classes),
+        "majority_err": float(1 - counts.max() / len(d.y_val)),
+    }
 
 
 def run_gate(task: str, gate: str, client: anthropic.Anthropic) -> None:
@@ -111,9 +121,18 @@ def run_gate(task: str, gate: str, client: anthropic.Anthropic) -> None:
     best_val = rows[0]["val_err"]
     best_test = rows[0]["test_err"]
     best_train = rows[0]["train_err"]
-    out = [{"i": rows[0]["i"], "desc": rows[0]["desc"], "train_err": best_train,
-            "val_err": best_val, "test_err": best_test, "status": "keep",
-            "best_val_after": best_val, "best_test_after": best_test}]
+    out = [
+        {
+            "i": rows[0]["i"],
+            "desc": rows[0]["desc"],
+            "train_err": best_train,
+            "val_err": best_val,
+            "test_err": best_test,
+            "status": "keep",
+            "best_val_after": best_val,
+            "best_test_after": best_test,
+        }
+    ]
     n_eval = 1
     for r in rows[1:]:
         n_eval += 1
@@ -123,10 +142,17 @@ def run_gate(task: str, gate: str, client: anthropic.Anthropic) -> None:
         else:
             key = str(r["i"])
             if key not in decisions:
-                ctx = {**meta, "n_experiments": n_eval, "best_val": best_val,
-                       "best_train": best_train, "val_err": r["val_err"],
-                       "train_err": r["train_err"], "dval": dval, "desc": r["desc"],
-                       "sigma": sigma}
+                ctx = {
+                    **meta,
+                    "n_experiments": n_eval,
+                    "best_val": best_val,
+                    "best_train": best_train,
+                    "val_err": r["val_err"],
+                    "train_err": r["train_err"],
+                    "dval": dval,
+                    "desc": r["desc"],
+                    "sigma": sigma,
+                }
                 decisions[key] = ask(client, system, build_user(ctx, with_sigma))
                 dec_path.write_text(json.dumps(decisions, indent=2))
             keep = decisions[key]["p_real"] >= KEEP_THRESHOLD
@@ -135,9 +161,18 @@ def run_gate(task: str, gate: str, client: anthropic.Anthropic) -> None:
                 status = "keep"
             else:
                 status = "discard"
-        out.append({"i": r["i"], "desc": r["desc"], "train_err": r["train_err"],
-                    "val_err": r["val_err"], "test_err": r["test_err"], "status": status,
-                    "best_val_after": best_val, "best_test_after": best_test})
+        out.append(
+            {
+                "i": r["i"],
+                "desc": r["desc"],
+                "train_err": r["train_err"],
+                "val_err": r["val_err"],
+                "test_err": r["test_err"],
+                "status": status,
+                "best_val_after": best_val,
+                "best_test_after": best_test,
+            }
+        )
     (out_dir / "records.json").write_text(json.dumps(out, indent=2))
     kept = sum(1 for r in out if r["status"] == "keep")
     print(f"{task:36s} {gate:13s} kept={kept:2d}/{len(out)}")
@@ -149,7 +184,7 @@ def main() -> None:
     ap.add_argument("--tasks", nargs="*", default=None)
     args = ap.parse_args()
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    for task in (args.tasks or TASK_NAMES):
+    for task in args.tasks or TASK_NAMES:
         for gate in args.gates:
             run_gate(task, gate, client)
 

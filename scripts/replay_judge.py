@@ -99,8 +99,12 @@ def score_task(task: str, client: anthropic.Anthropic | None) -> dict[int, dict]
     """Return {i: {complexity, overfitting_risk, penalty, reasoning}} for every
     non-baseline proposal with a real val_err. Cached on disk."""
     task_dir = REPO / "results" / task
-    props = {p["i"]: p["new_train_py"] for p in
-             (json.loads(line) for line in (task_dir / "proposals.jsonl").read_text().splitlines())}
+    props = {
+        p["i"]: p["new_train_py"]
+        for p in (
+            json.loads(line) for line in (task_dir / "proposals.jsonl").read_text().splitlines()
+        )
+    }
     records = json.loads((task_dir / "records.json").read_text())
 
     cache_path = task_dir / "judge_scores.json"
@@ -130,9 +134,18 @@ def gate_judge(task: str, scores: dict[int, dict], sigma: float, lam: float) -> 
     rows = [r for r in records if r["val_err"] == r["val_err"]]
     best_val = rows[0]["val_err"]
     best_test = rows[0]["test_err"]
-    out = [{"i": rows[0]["i"], "desc": rows[0]["desc"], "train_err": rows[0]["train_err"],
-            "val_err": best_val, "test_err": best_test, "status": "keep",
-            "best_val_after": best_val, "best_test_after": best_test}]
+    out = [
+        {
+            "i": rows[0]["i"],
+            "desc": rows[0]["desc"],
+            "train_err": rows[0]["train_err"],
+            "val_err": best_val,
+            "test_err": best_test,
+            "status": "keep",
+            "best_val_after": best_val,
+            "best_test_after": best_test,
+        }
+    ]
     for r in rows[1:]:
         margin = scores[r["i"]]["penalty"] * lam * sigma
         if best_val - r["val_err"] > margin:
@@ -140,9 +153,18 @@ def gate_judge(task: str, scores: dict[int, dict], sigma: float, lam: float) -> 
             status = "keep"
         else:
             status = "discard"
-        out.append({"i": r["i"], "desc": r["desc"], "train_err": r["train_err"],
-                    "val_err": r["val_err"], "test_err": r["test_err"], "status": status,
-                    "best_val_after": best_val, "best_test_after": best_test})
+        out.append(
+            {
+                "i": r["i"],
+                "desc": r["desc"],
+                "train_err": r["train_err"],
+                "val_err": r["val_err"],
+                "test_err": r["test_err"],
+                "status": status,
+                "best_val_after": best_val,
+                "best_test_after": best_test,
+            }
+        )
     return out
 
 
@@ -156,7 +178,7 @@ def main() -> None:
     sigma_data = json.loads(SIGMA_JSON.read_text())["per_task"]
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-    for task in (args.tasks or TASK_NAMES):
+    for task in args.tasks or TASK_NAMES:
         scores = score_task(task, client)
         n = len(scores)
         mean_pen = sum(s["penalty"] for s in scores.values()) / n if n else float("nan")

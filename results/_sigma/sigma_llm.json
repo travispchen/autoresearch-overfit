@@ -1,0 +1,62 @@
+{
+  "credit-g": {
+    "sigma": 0.043,
+    "reasoning": "For a binomial process with n=100 trials and observed error rate p=0.24, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.24*0.76/100) \u2248 0.043."
+  },
+  "diabetes": {
+    "sigma": 0.0482,
+    "reasoning": "For a binomial proportion with n=77 and p=0.2338, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.2338*0.7662/77) \u2248 0.0482."
+  },
+  "kc1": {
+    "sigma": 0.024,
+    "reasoning": "For a binomial proportion with n=211 and p\u22480.14, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.14\u00d70.86/211) \u2248 0.024."
+  },
+  "phoneme": {
+    "sigma": 0.0143,
+    "reasoning": "For a binomial proportion with n=541 and p=0.1275, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.1275*0.8725/541) \u2248 0.0143."
+  },
+  "vehicle": {
+    "sigma": 0.039,
+    "reasoning": "With n_val=85 and observed error rate p=0.1529, the binomial standard deviation is sqrt(p*(1-p)/n_val) = sqrt(0.1529*0.8471/85) \u2248 0.039."
+  },
+  "wilt": {
+    "sigma": 0.0065,
+    "reasoning": "For a binomial proportion with n=484 and p=0.0207, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.0207*0.9793/484) \u2248 0.0065."
+  },
+  "spambase": {
+    "sigma": 0.0093,
+    "reasoning": "For a binary classification with validation error 0.0413 on 460 examples, the standard deviation is sqrt(0.0413 * (1 - 0.0413) / 460) \u2248 0.0093, treating the error rate as a binomial proportion."
+  },
+  "mushroom": {
+    "sigma": 0.0,
+    "reasoning": "With 0 validation errors observed, the true error rate is likely very small, making the standard deviation of the Bernoulli sampling process approximately sqrt(p*(1-p)/n_val) \u2248 0 when p\u22480, though this severely underestimates uncertainty about the true error rate itself."
+  },
+  "blood-transfusion-service-center": {
+    "sigma": 0.0484,
+    "reasoning": "For a binomial proportion (validation error) with n=75 and p\u22480.23, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.2267\u00d70.7733/75) \u2248 0.0484."
+  },
+  "banknote-authentication": {
+    "sigma": 0.0072,
+    "reasoning": "For a binomial proportion with n=138 and observed error rate p=0.0072 (only ~1 misclassification), the standard deviation is sqrt(p(1-p)/n) \u2248 sqrt(0.0072\u00d70.9928/138) \u2248 0.0072."
+  },
+  "splice": {
+    "sigma": 0.0118,
+    "reasoning": "Using the binomial proportion standard error formula sqrt(p(1-p)/n) with p=0.047 and n=319 gives sigma \u2248 0.0118, representing the expected wiggle in validation error from resampling the validation set."
+  },
+  "segment": {
+    "sigma": 0.0086,
+    "reasoning": "With validation error of 0.0173 on 231 examples, approximately 4 errors occur, so the standard deviation is sqrt(p*(1-p)/n) = sqrt(0.0173*0.9827/231) \u2248 0.0086."
+  },
+  "satimage": {
+    "sigma": 0.0094,
+    "reasoning": "The validation error of 0.0607 with n_val=643 gives a binomial standard deviation of sqrt(0.0607 * 0.9393 / 643) \u2248 0.0094, representing the sampling variability from choosing different validation sets."
+  },
+  "mfeat-factors": {
+    "sigma": 0.0154,
+    "reasoning": "For a binomial proportion (validation error = 0.05) with n=200 samples, the standard deviation is sqrt(p(1-p)/n) = sqrt(0.05*0.95/200) \u2248 0.0154."
+  },
+  "cmc": {
+    "sigma": 0.041,
+    "reasoning": "For a binomial proportion (error rate) of p=0.5135 on n=148 examples, the standard deviation is sqrt(p*(1-p)/n) = sqrt(0.5135*0.4865/148) \u2248 0.041."
+  }
+}
