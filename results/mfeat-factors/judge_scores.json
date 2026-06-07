@@ -1,0 +1,122 @@
+{
+  "1": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change increasing n_estimators from default (100) to 300. This adds one hyperparameter value but uses a standard XGBoost parameter. Moderate overfitting risk as more trees can overfit, though XGBoost has built-in regularization."
+  },
+  "2": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding a single hyperparameter (learning_rate=0.05). This is a standard XGBoost parameter, but setting it to a specific value without search introduces moderate overfitting risk through implicit validation set selection."
+  },
+  "3": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Minor change adding a single hyperparameter (max_depth=4) to XGBoost. This is a common regularization parameter, but setting it to a specific value (4) without tuning adds moderate overfitting risk through hyperparameter selection."
+  },
+  "4": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding a single hyperparameter (n_estimators=200). Increasing boosting rounds from default (typically 100) adds modeling capacity, which moderately increases overfitting risk through hyperparameter selection."
+  },
+  "5": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adding a single hyperparameter (learning_rate=0.1) with XGBoost's default value. This is a minor change that makes an implicit parameter explicit, adding minimal complexity and low overfitting risk since 0.1 is the standard default."
+  },
+  "6": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adding a single hyperparameter (colsample_bytree=0.8) is a minor change. This parameter actually acts as regularization by randomly sampling features, which typically reduces overfitting risk rather than increasing it."
+  },
+  "7": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds a single hyperparameter (colsample_bylevel=0.8) to XGBoost, which controls column sampling per tree level. Minor complexity increase with low overfitting risk as it's a standard regularization technique."
+  },
+  "8": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adding a single well-established XGBoost parameter (subsample=0.8) for row subsampling. This is a minor change that actually reduces overfitting risk by introducing additional regularization through stochastic sampling."
+  },
+  "9": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds a single well-established XGBoost regularization parameter (min_child_weight) with a conservative value that increases the minimum sample requirement for splits, slightly reducing model complexity and overfitting risk."
+  },
+  "10": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Adds a single L1 regularization parameter (reg_alpha=0.5) to XGBoost, which is a well-established regularization technique that actually reduces overfitting risk rather than increasing it."
+  },
+  "11": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "This is a minor change reducing max_depth from 4 to 3, which actually reduces model complexity and overfitting risk by constraining tree depth, a standard regularization technique in gradient boosting."
+  },
+  "12": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adding a single well-known XGBoost hyperparameter (subsample=0.9) for row subsampling. This is a minor change with low overfitting risk as subsampling typically acts as regularization."
+  },
+  "13": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Adds a single L2 regularization parameter (reg_lambda) with a standard default value of 1.0, which actually reduces overfitting risk rather than increasing it."
+  },
+  "14": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Adding a single regularization parameter (gamma=0.1) to XGBoost, which controls minimum loss reduction for splits. This adds minimal complexity and actually reduces overfitting risk through regularization."
+  },
+  "15": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Minor change adding a single hyperparameter (n_estimators=200). Increasing ensemble size typically improves performance but adds moderate overfitting risk if selected based on validation error alone."
+  },
+  "16": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adding a single hyperparameter (learning_rate=0.4) is a minor change with low complexity. The overfitting risk is low-moderate as it's a standard XGBoost parameter, though the specific value could be tuned to the validation set."
+  },
+  "17": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "This is a minor change replacing one XGBoost hyperparameter (colsample_bylevel) with another (colsample_bynode), both controlling column subsampling at different tree-building stages. It's a standard XGBoost feature with no additional complexity, and represents a low overfitting risk as it's a well-established regularization technique."
+  },
+  "19": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Single hyperparameter change increasing max_depth from 4 to 5, which adds minimal complexity but moderately increases model capacity and potential for overfitting to validation set through iterative tuning."
+  },
+  "20": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adjusting a single hyperparameter (colsample_bytree from 0.8 to 0.6). This reduces feature sampling which can act as regularization, but when selected via validation performance it represents moderate overfitting risk as it's one more tuned parameter."
+  },
+  "21": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Minor change adding a single well-known XGBoost regularization parameter (min_child_weight=3), which typically reduces overfitting by requiring minimum sample weight in child nodes."
+  },
+  "22": {
+    "complexity": 0.0,
+    "overfitting_risk": 0.0,
+    "reasoning": "Removes one hyperparameter (colsample_bylevel), simplifying the model configuration and reducing degrees of freedom, which typically decreases overfitting risk."
+  },
+  "23": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Minor change adding a single well-known regularization parameter (subsample=0.8) that performs row subsampling in XGBoost. This actually reduces overfitting risk rather than increasing it, as subsampling is a standard regularization technique."
+  },
+  "24": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "This is a minor change reducing max_depth from 4 to 3, which slightly simplifies the model. Decreasing tree depth actually reduces overfitting risk rather than increasing it, as it constrains model complexity."
+  },
+  "25": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Adding a single L1 regularization parameter (reg_alpha) is a minor change that actually reduces overfitting risk through explicit regularization, though it does introduce one tunable hyperparameter."
+  }
+}

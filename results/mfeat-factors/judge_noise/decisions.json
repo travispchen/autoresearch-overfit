@@ -1,0 +1,86 @@
+{
+  "3": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.005 corresponds to only 1 sample out of 200 changing prediction, well within noise (SE \u2248 0.015 at this error rate). With 4 experiments already run, this is likely selection bias from random fluctuation rather than genuine improvement."
+  },
+  "4": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.005 corresponds to only 1 sample changing prediction out of 200. The standard error at this error rate is ~sqrt(0.045*0.955/200) \u2248 0.015, making this improvement only ~0.3 standard errors\u2014well within noise. With 5 experiments already run, selection bias further inflates the chance this is a lucky fluctuation rather than real signal."
+  },
+  "6": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.01 corresponds to only 2 samples out of 200, which is within noise margins (SE \u2248 sqrt(0.045*0.955/200) \u2248 0.015). With 7 experiments already run, selection bias makes this small improvement likely noise rather than a true generalization gain, especially given both models show perfect training error suggesting potential overfitting."
+  },
+  "7": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.02 (4 samples) is modest given n_val=200 and the standard error ~sqrt(0.05*0.95/200)\u22480.015. With 8 experiments already run, selection bias inflates the chance this is simply the best noise fluctuation rather than a real improvement."
+  },
+  "8": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.015 corresponds to only 3 samples out of 200 changing predictions, which is below the standard error (~sqrt(0.04*0.96/200) \u2248 0.014). With 9 experiments already run, selection bias makes it likely this is a lucky fluctuation rather than genuine improvement, especially since both models already perfectly fit training data (0.0 train error)."
+  },
+  "9": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.02 corresponds to only 4 samples out of 200, which is within ~1-2 standard errors (SE \u2248 sqrt(0.05*0.95/200) \u2248 0.015). With 10 experiments already run, selection bias makes it likely this is the best of noisy trials rather than a true improvement, especially since both models already show perfect train error suggesting they're at the model capacity limit."
+  },
+  "10": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 (3 samples) is marginal given the standard error ~sqrt(0.04*0.96/200)\u22480.014, making it barely distinguishable from noise. With 11 experiments already run, selection bias substantially inflates the chance this is a false positive from random variation rather than a genuine improvement."
+  },
+  "11": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 corresponds to only 3 samples out of 200, which is well within noise given the standard error ~sqrt(0.05*0.95/200)\u22480.015. With 12 experiments already run, selection bias makes this small difference more likely due to luck than a real effect."
+  },
+  "12": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.02 (4 samples) is modest given n_val=200 and the SE \u2248 sqrt(0.05*0.95/200) \u2248 0.015. With 13 experiments already run, selection bias is moderate. Both models show perfect train error (0.0000), suggesting potential overfitting, making the subsample parameter theoretically sound but the observed improvement likely contains substantial noise."
+  },
+  "13": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.02 (4 samples) is marginal given n_val=200 and standard error ~sqrt(0.05*0.95/200)\u22480.015. With 14 experiments creating selection bias, this 1.3-sigma effect could easily be noise, though the regularization rationale is sensible and both models show zero train error suggesting potential overfitting benefits."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement is only 1 sample out of 200 (\u0394val=0.005), which is well within noise given the standard error ~sqrt(0.045*0.955/200)\u22480.015. After 15 experiments, selection bias makes this tiny difference very likely to be a lucky fluctuation rather than real improvement."
+  },
+  "15": {
+    "p_real": 0.15,
+    "reasoning": "Only 2 samples changed predictions out of 200. The standard error at p=0.04 is ~0.014, making this 0.01 improvement less than 1 SE and easily noise. After 16 experiments, selection bias makes finding such small differences by chance quite likely."
+  },
+  "16": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 corresponds to only 3 samples out of 200, which is well within noise range (standard error ~0.015 at this error rate). After 17 experiments, selection bias makes this small difference likely due to random validation-set fluctuations rather than true generalization improvement."
+  },
+  "17": {
+    "p_real": 0.25,
+    "reasoning": "A drop of 0.02 (4 samples) on n_val=200 is marginal\u2014about 1.5 standard errors at this error rate. After 18 experiments, selection bias is substantial: we expect ~1-2 spurious improvements of this magnitude by chance alone among the trials tested."
+  },
+  "19": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.015 corresponds to only 3 samples changing in a 200-sample validation set. Given the standard error at this error rate (~0.013) and selection bias from 19 experiments, this 1.15-sigma improvement is likely noise rather than a generalizable gain, especially since train error is already at zero (overfitting risk with deeper trees)."
+  },
+  "20": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.02 (4 samples) is modest relative to the standard error ~sqrt(0.04*0.96/200)\u22480.014. After 20 experiments, selection bias inflates apparent improvements significantly. Both models show perfect train error (0.0), suggesting overfitting, making the val-error drop more likely noise than a generalizable gain from this hyperparameter tweak."
+  },
+  "21": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.02 corresponds to only 4 samples changing on a 200-sample validation set. With both models at 0% train error, they're severely overfitting, making the validation difference likely noise. After 21 experiments, selection bias heavily inflates the chance this is a lucky fluctuation rather than real improvement."
+  },
+  "22": {
+    "p_real": 0.15,
+    "reasoning": "The improvement is only 2 samples out of 200 in a validation set, which is well within noise (SE \u2248 sqrt(0.05*0.95/200) \u2248 0.015). After 22 experiments, selection bias makes this marginal difference very likely spurious."
+  },
+  "23": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 (3 samples) is barely above noise level given stderr \u2248 sqrt(0.05*0.95/200) \u2248 0.015. With 23 experiments already run, selection bias heavily inflates the chance this is a lucky fluctuation rather than real improvement, especially since both train errors remain at perfect 0.0 suggesting potential overfitting issues unresolved by the subsample change."
+  },
+  "24": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 corresponds to only 3 samples out of 200, which is marginal given the standard error (~0.015 at p=0.05). After 24 experiments, selection bias is substantial, and both models show perfect train error (0.0000), suggesting overfitting rather than the proposed change genuinely reducing it."
+  },
+  "25": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.015 (3 samples out of 200) is barely above noise level given the standard error ~sqrt(0.04*0.96/200)\u22480.014. With 25 experiments already run, selection bias strongly inflates the chance this is a lucky outlier rather than a true gain."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "1": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing predictions on a 75-sample validation set. The standard error of the rate is ~sqrt(0.22*0.78/75) \u2248 0.048, making this 0.56 standard errors\u2014well within noise range. With 2 experiments run, selection bias is minimal, but the signal remains weak."
+  },
+  "2": {
+    "p_real": 0.78,
+    "reasoning": "The improvement of 0.0533 (4 samples) is substantial relative to the baseline noise level (~sqrt(0.227*0.773/75) \u2248 0.048), representing roughly 1.1 standard errors. The train error increased from 0.068 to 0.113 while validation error dropped, suggesting reduced overfitting rather than noise. With only 3 experiments run, selection bias is minimal."
+  },
+  "4": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0133 corresponds to only 1 sample changing prediction on a 75-sample validation set, which is well within noise (SE \u2248 0.044 for p\u22480.17). Additionally, train error increased substantially (0.1132\u21920.1770), suggesting the model became significantly weaker rather than better regularized, making this likely a lucky validation fluctuation among 5 trials."
+  },
+  "9": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing in a 75-sample validation set. The standard error for the baseline rate (~0.17) is ~0.043, making this a ~0.6 SD shift\u2014well within noise. With 10 experiments run, selection bias inflates apparent improvements. The higher train error (0.1667 vs 0.1132) suggests worse fitting capacity, not better generalization."
+  },
+  "10": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0267 (only 2 samples on n_val=75) is marginal and within ~1 SE of noise (SE \u2248 sqrt(0.17*0.83/75) \u2248 0.043). With 11 experiments already run, selection bias inflates the chance this is a lucky outlier. The higher train error (0.177 vs 0.113) suggests the regularization may be overly restrictive rather than genuinely better."
+  },
+  "11": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples on a 75-sample validation set (SE \u2248 0.044), making it barely above noise level. Additionally, train error increased from 0.1132 to 0.1770, suggesting the model became less expressive rather than better regularized, and with 12 experiments already run, selection bias inflates apparent improvements."
+  },
+  "13": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples out of 75, which is within noise range (~1.4 standard errors given baseline rate). More concerning, train error actually increased from 0.1132 to 0.1667, suggesting the model got worse at fitting patterns rather than better at generalizing\u2014opposite to what regularization should achieve if working properly."
+  },
+  "14": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing in a 75-sample validation set, which is within typical noise (SE \u2248 0.044 for p\u22480.17). After 15 experiments, selection bias makes such small improvements likely spurious, especially given the train error increased, suggesting underfitting correction rather than genuine model improvement."
+  },
+  "16": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0133 corresponds to only 1 sample changing prediction in a 75-sample validation set. With 17 experiments already run, this is likely selection noise. Additionally, the train error increased substantially (0.1132\u21920.1667), suggesting the model is actually underfitting rather than generalizing better."
+  },
+  "17": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples on a 75-sample validation set, which is barely above noise level (SE \u2248 0.044). More concerning, train error increased from 0.113 to 0.163 while val error dropped\u2014this pattern suggests the previous model was overfitting, but with 18 experiments already run, selection bias makes it likely this is just a lucky draw from noise rather than a generalizable improvement."
+  },
+  "21": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing on a 75-sample validation set (SE \u2248 0.044), making it barely above noise level. After 21 experiments, selection bias is substantial, and the increased train error (0.1728 vs 0.1132) suggests potential underfitting rather than better generalization."
+  },
+  "22": {
+    "p_real": 0.28,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing on a 75-sample validation set (SE \u2248 0.044), making this barely above noise level. Additionally, the proposed change shows higher train error (0.1770 vs 0.1132), suggesting potential underfitting rather than better generalization, and after 22 experiments the selection bias is substantial."
+  },
+  "23": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0133 corresponds to only 1 sample changing prediction on a 75-sample validation set. With 23 experiments already run, this creates substantial selection bias. The standard error for a rate around 0.17 is ~0.043, making this 0.3\u03c3 improvement easily attributable to noise plus multiple comparisons."
+  },
+  "25": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0267 corresponds to only 2 samples changing in a 75-sample validation set, well within noise range (stderr ~0.04). Train error actually increased (0.1132\u21920.1667), suggesting reduced overfitting, but after 25 experiments the selection bias is substantial and this magnitude is indistinguishable from random fluctuation."
+  }
+}

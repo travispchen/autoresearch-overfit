@@ -1,0 +1,42 @@
+{
+  "1": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0047 corresponds to only ~1 sample changing prediction on a 211-sample validation set. The standard error of a rate around 0.14 is ~0.024, making this a ~0.2\u03c3 effect\u2014well within noise. With 2 experiments run, selection bias is minimal, but the signal is too weak to be credible."
+  },
+  "7": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0047 corresponds to only ~1 sample changing prediction on a 211-sample validation set. The standard error of the validation rate is ~sqrt(0.14*0.86/211) \u2248 0.024, making this improvement only ~0.2 standard errors\u2014well within noise. With 8 experiments already run, selection bias further inflates the chance this is a lucky fluctuation."
+  },
+  "10": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0047 corresponds to only ~1 sample changing prediction in a 211-sample validation set. The standard error for a rate of ~0.14 is sqrt(0.14*0.86/211) \u2248 0.024, making this improvement only ~0.2 standard errors\u2014well within noise. After 11 experiments, selection bias makes even random fluctuations appear promising."
+  },
+  "12": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0047 corresponds to only ~1 sample changing in a 211-sample validation set, well within noise (SE \u2248 0.024). After 13 experiments, selection bias substantially inflates the chance this is a lucky fluctuation rather than genuine signal."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement is only ~1 sample (0.0047 * 211 \u2248 1.0) on a 211-sample validation set, well within noise range (SE \u2248 0.024). After 15 experiments, selection bias makes this tiny difference likely spurious; moreover, reducing n_estimators typically hurts XGBoost performance, contradicting the claimed improvement direction."
+  },
+  "16": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0095 corresponds to only ~2 samples changing in a 211-sample validation set, which is within typical noise (SE \u2248 sqrt(0.14*0.86/211) \u2248 0.024). After 17 experiments, selection bias makes such small improvements highly likely to be false positives from random variation."
+  },
+  "22": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0095 corresponds to only ~2 samples changing in a 211-sample validation set. The standard error at p\u22480.14 is ~0.024, making this a ~0.4 SD improvement\u2014well within noise. After 23 experiments, selection bias strongly inflates the chance this is a lucky fluctuation rather than real generalization."
+  },
+  "23": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0142 (3 samples) is barely above noise level given stderr \u2248 sqrt(0.14*0.86/211) \u2248 0.024. After 24 experiments, selection bias makes this marginal improvement likely spurious\u2014just adding more trees without architectural innovation typically overfits rather than genuinely improves generalization."
+  },
+  "24": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0047 corresponds to only ~1 sample changing prediction in a 211-sample validation set. With standard error ~sqrt(0.14*0.86/211) \u2248 0.024, this 0.0047 improvement is only 0.2 standard errors\u2014well within noise. After 25 experiments, selection bias makes this likely a lucky fluctuation rather than real improvement."
+  },
+  "25": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0142 (3 samples) is marginal given the standard error ~sqrt(0.14*0.86/211)\u22480.024. With 26 experiments already run, selection bias significantly inflates the chance this is a lucky fluctuation rather than a real improvement from max_depth=6 vs previous configurations."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "3": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction and is merely 0.32 sigma_val, well within typical noise fluctuations. With 4 experiments already run, selection bias further inflates the chance this is a lucky draw rather than real progress."
+  },
+  "4": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction and is merely 0.32 sigma_val\u2014well within noise. With 5 experiments already run, this small improvement is very likely selection bias rather than a real gain."
+  },
+  "5": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 is only 0.32 standard deviations (far below the 1-2 sigma threshold for significance) and represents just 1 sample changing prediction out of 484. With 6 experiments already run, selection bias likely inflates this noise-level change."
+  },
+  "6": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0041 is only 0.63 standard deviations (< 1 sigma_val), corresponding to just 2 samples changing predictions. With 7 experiments already run, this small signal is likely selection noise rather than a real improvement."
+  },
+  "7": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0083 is only 1.26\u00d7 the bootstrap noise floor (sigma_val=0.0066), meaning it's barely above measurement noise. With 8 experiments already run, selection bias inflates the apparent improvement; this could easily be the best of noisy trials rather than a genuine gain."
+  },
+  "8": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0062 is slightly below 1 sigma_val (0.0066), corresponding to only ~3 samples changing prediction. With 9 experiments already run, selection bias is moderate. The improvement is barely distinguishable from noise."
+  },
+  "9": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0041 is only 0.63 standard deviations (below 1 sigma_val) and represents just 2 samples changing predictions on a 484-sample validation set. After 10 experiments, this modest improvement is likely selection noise rather than a genuine gain."
+  },
+  "10": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0083 is only 1.26\u00d7 the bootstrap noise floor (sigma_val=0.0066), meaning it's barely distinguishable from validation set sampling variability. With 11 experiments already run, selection bias inflates the chance this is a lucky fluctuation rather than a true improvement."
+  },
+  "11": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0083 is only 1.26\u00d7 the bootstrap noise floor (sigma_val=0.0066), meaning it's barely above typical random fluctuation. With 12 experiments run, selection bias likely inflates this marginal signal, and the train error increase (0.0000\u21920.0029) suggests the model is actually fitting slightly worse overall rather than genuinely improving."
+  },
+  "12": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0083 is only 1.26\u00d7 the bootstrap noise floor (sigma_val=0.0066), meaning it's barely above the typical random fluctuation. With 13 experiments already run, selection bias makes this marginal improvement likely noise rather than a real generalizable gain."
+  },
+  "13": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0062 is only 0.95\u00d7 sigma_val (below 1 standard deviation of validation noise), corresponding to just 3 samples changing prediction. After 14 experiments, selection bias substantially inflates the chance this is noise rather than genuine improvement."
+  },
+  "14": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.0103 is 1.58\u00d7 the bootstrap noise floor (sigma_val=0.0066), which is moderate evidence for a real effect. However, with 15 experiments already run, selection bias inflates apparent improvements; the proposed change also shows some overfitting (train error 0.0032 vs. current 0.0000), though it achieves better validation performance. The signal-to-noise ratio and non-zero train error suggest this is likely real but not certain."
+  }
+}

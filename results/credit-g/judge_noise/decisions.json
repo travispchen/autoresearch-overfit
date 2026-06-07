@@ -1,0 +1,6 @@
+{
+  "2": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.02 (2 samples) is modest but the change addresses clear overfitting (train error improved from 0.00 to 0.0185 while val error dropped). With only 3 experiments, selection bias is minimal, and the regularization direction is theoretically sound for the observed overfitting pattern."
+  }
+}

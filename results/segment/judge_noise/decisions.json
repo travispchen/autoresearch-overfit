@@ -1,0 +1,26 @@
+{
+  "2": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0043 corresponds to exactly 1 sample changing prediction on a 231-sample validation set. With standard error ~sqrt(0.013*0.987/231)\u22480.0074, this 1-sample change is well within noise (< 1 SE). With 3 experiments already run, selection bias makes this likely a lucky fluctuation rather than real improvement."
+  },
+  "3": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0043 corresponds to only ~1 sample changing prediction on a 231-sample validation set. The standard error at this error rate (~0.013) is approximately 0.0075, making this improvement smaller than 1 standard error and highly likely to be noise, especially given 4 experiments have been run."
+  },
+  "8": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0043 corresponds to exactly 1 sample changing prediction out of 231. With baseline error ~0.017, the standard error is ~sqrt(0.017*0.983/231) \u2248 0.0085, making this a ~0.5 SE improvement\u2014well within noise. After 8 experiments, selection bias makes even this tiny signal likely spurious."
+  },
+  "9": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0087 corresponds to only 2 samples changing predictions out of 231. With baseline error of 0.0173, the standard error is ~sqrt(0.0173*0.9827/231) \u2248 0.0086, making this a ~1 SE improvement. After 9 experiments, selection bias makes such small improvements (especially just 2 samples) very likely to be noise rather than genuine generalization."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement is only 1.0 sample out of 231 validation samples, which is well within noise given the standard error ~sqrt(0.0173*0.9827/231)\u22480.0085. After 14 experiments, selection bias makes this tiny improvement likely spurious despite the reasonable rationale."
+  },
+  "15": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0087 corresponds to only 2 samples changing prediction out of 231. With baseline error ~0.017, the standard error is ~sqrt(0.017*0.983/231) \u2248 0.0085, making this a ~1 SE improvement. After 15 experiments, selection bias is substantial, and a 2-sample difference is easily explained by noise."
+  }
+}

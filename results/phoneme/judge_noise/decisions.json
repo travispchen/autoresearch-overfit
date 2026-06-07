@@ -1,0 +1,14 @@
+{
+  "1": {
+    "p_real": 0.78,
+    "reasoning": "The improvement of 0.0166 (9 samples) is ~2.4 standard errors given SE \u2248 sqrt(0.127*0.873/541) \u2248 0.014, which is statistically meaningful. However, train error dropped to 0.0000, indicating potential overfitting, and with only 2 experiments the selection bias is minimal but the perfect train fit raises modest concern about generalization."
+  },
+  "3": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0037 corresponds to only ~2 samples changing in a 541-sample validation set, which is well within noise (SE \u2248 0.014). With 4 experiments already run, selection bias makes this tiny improvement likely spurious, especially given the suspiciously perfect train error (0.0000) of the current best suggests overfitting."
+  },
+  "6": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.0129 (7 samples) is ~2.4 standard errors given SE \u2248 sqrt(0.11*0.89/541) \u2248 0.013, which is moderately strong. The proposed change also reduces overfitting (train error increased from 0.0 to 0.0162), mechanistically consistent with subsample regularization. With only 6 experiments, selection bias is modest."
+  }
+}

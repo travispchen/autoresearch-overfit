@@ -1,0 +1,18 @@
+{
+  "5": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.013 corresponds to exactly 1 sample out of 77 changing prediction, well within noise (SE \u2248 0.048 for p\u22480.23). With 6 experiments already run, selection bias makes this look like the best of noisy fluctuations rather than genuine improvement, especially given both models show perfect train error (0.0) indicating they're already overfitting despite the regularization claim."
+  },
+  "7": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.013 corresponds to exactly 1 sample changing prediction on a 77-sample validation set. With both models showing perfect train error (0.0000), overfitting remains complete despite added regularization. After 8 experiments, this 1-sample change is most likely noise from selection bias rather than genuine generalization improvement."
+  },
+  "11": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.026 corresponds to only 2 samples out of 77 changing prediction, which is within typical noise (SE \u2248 0.048 for p\u22480.23). After 12 experiments, selection bias significantly inflates the chance this is a lucky draw rather than genuine improvement. The train error increase (0.0000\u21920.0261) suggests reduced overfitting, which is directionally correct, but the magnitude on validation remains statistically weak."
+  },
+  "12": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.039 (3 samples) is ~2.4 standard errors given SE \u2248 sqrt(0.23*0.77/77) \u2248 0.048. The increased train error (0.006 vs 0.000) suggests reduced overfitting, making this a credible generalization improvement despite selection bias from 13 experiments."
+  }
+}

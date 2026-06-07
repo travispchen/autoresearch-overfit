@@ -1,0 +1,122 @@
+{
+  "1": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding a single hyperparameter (n_estimators=300). Moderate overfitting risk as increasing trees can overfit validation set when selected based on val_err, though it's a standard XGBoost parameter."
+  },
+  "2": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Sets a single hyperparameter (max_depth=8) that constrains tree depth. This is a minor change with moderate overfitting risk since the specific value could be tuned to the validation set."
+  },
+  "3": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Added two standard XGBoost hyperparameters (learning_rate and n_estimators). This is a minor change with well-known parameters, but introduces two tunable knobs that could be adjusted to overfit validation performance."
+  },
+  "4": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Changes two standard XGBoost hyperparameters (max_depth and n_estimators) with commonly-used values. Moderate overfitting risk since these are tunable parameters that could be selected to fit the validation set."
+  },
+  "5": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds two standard XGBoost regularization parameters (subsample and colsample_bytree) with common default values. These are well-established techniques that typically reduce overfitting rather than increase it."
+  },
+  "6": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds two standard XGBoost regularization parameters (min_child_weight=3, gamma=0.1) with fixed values. These are well-established regularization techniques that actually reduce overfitting risk rather than increase it."
+  },
+  "7": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds two standard XGBoost hyperparameters (learning_rate and n_estimators) with commonly used default values. Minor change with low overfitting risk as these are well-established parameters with typical settings."
+  },
+  "8": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (max_depth=7, colsample_bytree=0.9). These are well-known regularization knobs, but their specific values create moderate overfitting risk through hyperparameter selection on validation error."
+  },
+  "9": {
+    "complexity": 0.4,
+    "overfitting_risk": 0.6,
+    "reasoning": "Adds class imbalance handling via scale_pos_weight computation, which is moderately complex. However, it assumes binary classification and calculates the weight on validation-selected data, creating moderate overfitting risk through implicit hyperparameter tuning on the validation set."
+  },
+  "10": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Adding L1 regularization (reg_alpha=0.1) is a minor change that adds one hyperparameter. Regularization typically reduces overfitting risk rather than increasing it."
+  },
+  "11": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (max_depth=5, n_estimators=150). Moderate overfitting risk since these are tunable parameters that could be selected to fit validation data, though the values chosen are reasonable defaults."
+  },
+  "12": {
+    "complexity": 0.4,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds StandardScaler preprocessing with no new hyperparameters. This is a well-established preprocessing step that typically improves model performance legitimately rather than overfitting to validation data."
+  },
+  "13": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds a single well-known regularization parameter (reg_lambda=1.0) to XGBoost, which is a minor change that actually reduces overfitting risk rather than increasing it."
+  },
+  "15": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (max_depth=4, n_estimators=150). Moderate overfitting risk since these are tunable parameters that could be selected to fit validation performance."
+  },
+  "16": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change: increased n_estimators from default (100) to 300. Adds moderate overfitting risk as more trees can overfit, though this is a standard hyperparameter with one additional degree of freedom for validation-based selection."
+  },
+  "17": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds two standard XGBoost regularization hyperparameters (subsample and colsample_bytree) with conservative values (0.8). These are well-established techniques that typically reduce overfitting rather than increase it."
+  },
+  "18": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (learning_rate and n_estimators). Moderate overfitting risk as these are common tunable parameters that could be optimized to the validation set."
+  },
+  "19": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Adds a single standard XGBoost hyperparameter (colsample_bynode=0.8) that controls feature sampling per node. This is a minor change with one new tunable parameter that could moderately overfit through selection."
+  },
+  "20": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two common XGBoost hyperparameters (max_depth=8, n_estimators=200). Moderate overfitting risk as these could be tuned to the validation set, though values are reasonable defaults."
+  },
+  "21": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds a single well-known XGBoost regularization parameter (min_child_weight=3) which increases the minimum sum of instance weights needed in a child node, slightly constraining the model and reducing overfitting risk."
+  },
+  "22": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds two standard XGBoost parameters (tree_method='hist' for faster training, enable_categorical=True for native categorical support) without introducing new hyperparameters to tune or significantly changing model behavior."
+  },
+  "23": {
+    "complexity": 0.4,
+    "overfitting_risk": 0.4,
+    "reasoning": "Adds class imbalance handling with scale_pos_weight calculation based on training set class distribution. Moderate complexity with automatic parameter tuning that could moderately overfit to validation set class balance patterns."
+  },
+  "24": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change adding L1 regularization (reg_alpha=1.0) to XGBoost. This is a standard regularization parameter with a fixed value, adding minimal complexity and actually reducing overfitting risk rather than increasing it."
+  },
+  "25": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (reg_lambda for L2 regularization and n_estimators). While reg_lambda reduces overfitting risk, increasing n_estimators and having two tunable parameters creates moderate risk of fitting to the validation set through selection."
+  }
+}

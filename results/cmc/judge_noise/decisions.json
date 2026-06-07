@@ -1,0 +1,18 @@
+{
+  "2": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.027 (4 samples) is ~2.1 standard errors given baseline rate ~0.51 (SE \u2248 0.041/sqrt(148) \u2248 0.013). The higher train error (0.175 vs 0.054) indicates reduced overfitting, consistent with lower learning rate. With only 3 experiments, selection bias is modest."
+  },
+  "8": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0068 corresponds to only ~1 sample changing prediction on a 148-sample validation set. The standard error of the validation error rate (~0.49) is approximately sqrt(0.49*0.51/148) \u2248 0.041, making this improvement only ~0.16 standard errors\u2014well within noise. With 8 experiments already run, selection bias further inflates the chance this is a lucky fluctuation rather than real improvement."
+  },
+  "9": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0068 corresponds to only ~1 sample out of 148 changing prediction. The standard error of validation error at ~0.48 is sqrt(0.48*0.52/148) \u2248 0.041, making this improvement only ~0.17 standard errors\u2014well within noise. After 9 experiments, selection bias further inflates the chance this is a lucky fluctuation rather than real generalization."
+  },
+  "13": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0068 corresponds to only ~1 sample changing prediction on a 148-sample validation set. The standard error for a rate around 0.48 is ~sqrt(0.48*0.52/148) \u2248 0.041, making this a ~0.17 standard-error change\u2014well within noise. After 13 experiments, selection bias significantly inflates the chance this is a lucky fluctuation rather than real improvement."
+  }
+}

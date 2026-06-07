@@ -1,0 +1,26 @@
+{
+  "9": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 is only 0.30 standard deviations of the validation noise (sigma_val=0.0395), corresponding to just 1 sample changing prediction. With 10 experiments already run, this is likely selection bias rather than a real improvement."
+  },
+  "10": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only ~1 sample changing prediction and is merely 0.30\u00d7 the bootstrap noise floor (sigma_val=0.0395). After 11 experiments, this tiny signal-to-noise ratio makes it highly likely this is selection bias rather than a genuine improvement."
+  },
+  "11": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 is only 0.30\u00d7 the bootstrap noise floor (sigma_val=0.0395), representing just 1 sample on n_val=85. After 12 experiments, selection bias is substantial, and this tiny signal-to-noise ratio suggests the improvement is likely noise rather than a real generalization gain."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 is only 0.30\u00d7 the bootstrap noise floor (sigma_val=0.0395), corresponding to ~1 sample change on n_val=85. After 15 experiments, selection bias makes such small improvements highly likely to be noise rather than genuine signal."
+  },
+  "23": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only 1 sample changing prediction and is merely 0.30\u00d7 the bootstrap noise floor (sigma_val=0.0395). After 23 experiments, this tiny signal is likely selection bias rather than a genuine improvement."
+  },
+  "24": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 is only 0.30\u00d7 the bootstrap noise floor (sigma_val=0.0395), corresponding to just 1 sample changing prediction. After 24 experiments, selection bias is substantial, and this signal-to-noise ratio is far too weak to confidently attribute to a real effect rather than random validation set fluctuation."
+  }
+}

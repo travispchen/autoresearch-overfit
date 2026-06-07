@@ -1,0 +1,26 @@
+{
+  "9": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only ~1 sample changing prediction on an 85-sample validation set. With stderr \u2248 sqrt(0.15*0.85/85) \u2248 0.039, this 0.0118 improvement is only ~0.3 standard errors\u2014well within noise. After 10 experiments, selection bias makes such small improvements highly likely to be artifacts of multiple testing rather than genuine gains."
+  },
+  "10": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to exactly 1 sample out of 85, well within noise (SE \u2248 0.04 for p~0.15). With 11 experiments already run, this is likely the best random fluctuation rather than a genuine improvement, especially given both models achieve perfect training accuracy."
+  },
+  "11": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only 1 sample changing prediction in an 85-sample validation set. With 12 experiments already run, selection bias is significant. The standard error at this error rate (~0.15) is ~sqrt(0.15*0.85/85) \u2248 0.039, making this 0.3\u03c3 improvement well within noise range."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only ~1 sample changing prediction out of 85. With baseline error ~0.15, the standard error is roughly sqrt(0.15*0.85/85) \u2248 0.039, making this a ~0.3 standard-error improvement\u2014well within noise. After 15 experiments, selection bias makes such small improvements highly likely to be lucky fluctuations rather than real gains."
+  },
+  "23": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only 1 sample changing prediction in an 85-sample validation set. With 23 experiments already run, this creates substantial selection bias\u2014we're likely seeing the best of many noisy trials. The standard error at this error rate (~0.15) is approximately 0.039, making this 0.3\u03c3 improvement well within noise."
+  },
+  "24": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0118 corresponds to only 1 sample changing prediction on n_val=85. With baseline error ~0.15, the standard error is ~sqrt(0.15*0.85/85)\u22480.039, making this a ~0.3\u03c3 effect. After 24 experiments, selection bias makes even this tiny, sub-1\u03c3 improvement very likely noise."
+  }
+}

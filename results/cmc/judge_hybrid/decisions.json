@@ -1,0 +1,62 @@
+{
+  "2": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.027 is only 0.64\u00d7 the bootstrap noise floor (sigma_val=0.042), making it statistically weak. With 3 experiments already run and the improvement corresponding to just 4 samples changing predictions, this is likely selection noise rather than a real effect."
+  },
+  "4": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0068 is only 0.16\u00d7 the bootstrap noise level (sigma_val=0.0423) and corresponds to just 1 sample changing prediction. With 5 experiments already run, this is likely selection noise rather than real generalization gain."
+  },
+  "5": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0203 is less than half of sigma_val (0.0423), meaning it's well within typical noise from finite-sample variance. With 6 experiments already run, selection bias further inflates the chance this is a lucky fluctuation rather than genuine progress."
+  },
+  "7": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0203 is less than half a standard deviation (0.48 sigma_val), making it indistinguishable from validation set noise. With 7 experiments already run, selection bias further inflates the chance this is a false positive from random fluctuation."
+  },
+  "8": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0338 is only 0.80 standard deviations of validation noise (\u0394val/sigma_val = 0.80), which is well below the ~2\u03c3 threshold typically needed for significance. With 8 experiments run, selection bias further inflates the chance this is a lucky fluctuation rather than real improvement."
+  },
+  "9": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0338 is only 0.80 sigma_val, below the typical 1-2 sigma threshold for reliable signal. With 9 experiments run, selection bias inflates apparent improvements, and the train error increased substantially (0.0544\u21920.1862), suggesting reduced overfitting but weak generalization evidence."
+  },
+  "11": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.027 is only 0.64 standard deviations of the validation noise (sigma_val=0.042), meaning it could easily arise from random variation. With 11 experiments run, selection bias inflates apparent improvements; the increased train error (0.054\u21920.142) suggests reduced overfitting, but the validation gain is too small relative to the noise floor to be confident."
+  },
+  "13": {
+    "p_real": 0.35,
+    "reasoning": "The improvement of 0.0338 is only 0.80 standard deviations of validation noise (sigma_val=0.0423), making it statistically weak. With 13 experiments already run, selection bias inflates apparent improvements; combined with increased train error (0.0544\u21920.0858) suggesting potential overfitting to validation noise rather than genuine generalization, this likely reflects random fluctuation."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0068 is only 0.16\u00d7 the bootstrap noise floor (sigma_val=0.0423), corresponding to ~1 sample. With 14 experiments already run, this is well within random fluctuation and highly likely noise rather than a real generalizable improvement."
+  },
+  "15": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0135 is only 0.32\u00d7 the bootstrap noise floor (sigma_val=0.0423), meaning it's well within typical random fluctuation. With 15 experiments already run, selection bias makes this noise-level improvement very likely spurious despite the reduced train error suggesting less overfitting."
+  },
+  "17": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0135 is only 0.32 standard deviations of the validation error's bootstrap noise (sigma_val=0.0423), meaning it's well within normal random fluctuation. After 17 experiments, selection bias makes such small improvements highly likely to be noise rather than genuine gains."
+  },
+  "19": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0135 is only 0.32\u00d7 sigma_val (well below 1 standard deviation of validation noise) and represents just 2 samples changing in a 148-sample set. After 19 experiments, selection bias strongly inflates the chance this is noise picked by luck rather than real improvement."
+  },
+  "23": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.027 is only 0.64\u00d7 the bootstrap noise floor (sigma_val=0.042), meaning it's well within typical random fluctuation. After 22 experiments, selection bias makes such small improvements likely spurious despite affecting 4 samples."
+  },
+  "24": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.027 is only 0.64\u00d7 the bootstrap noise floor (sigma_val=0.042), meaning it's within typical random fluctuation. After 23 experiments, selection bias makes such small improvements highly likely to be noise rather than signal."
+  },
+  "25": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0135 is only 0.32\u00d7 the bootstrap noise floor (sigma_val=0.0423), meaning it's well within typical random variation. With 24 experiments already run, selection bias strongly inflates the chance this is just the best-looking noise artifact."
+  }
+}

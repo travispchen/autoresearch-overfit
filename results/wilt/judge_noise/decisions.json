@@ -1,0 +1,42 @@
+{
+  "3": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to exactly 1 sample out of 484, which is far below the standard error (~0.006 for p\u22480.02). With 4 experiments run, this marginal change is most likely selection noise rather than a genuine improvement."
+  },
+  "4": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction in a 484-sample validation set. The standard error at this error rate is ~sqrt(0.02*0.98/484) \u2248 0.006, making this improvement only ~0.35 standard errors\u2014well within noise. With 5 experiments run, selection bias further inflates the chance this is a lucky fluctuation."
+  },
+  "5": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction on a 484-sample validation set. The standard error of the baseline rate (~0.021) is approximately sqrt(0.021*0.979/484) \u2248 0.0065, making this improvement only ~0.3 standard errors\u2014well within noise. With 6 experiments already run, selection bias further inflates the chance this is a lucky fluctuation rather than real progress."
+  },
+  "6": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0041 corresponds to only ~2 samples changing prediction in a 484-sample validation set. With standard error ~sqrt(0.02*0.98/484)\u22480.006, this 0.0041 change is less than 1 standard error and well within noise range. After 7 experiments, selection bias further inflates the chance this is a lucky fluke rather than real improvement."
+  },
+  "7": {
+    "p_real": 0.72,
+    "reasoning": "The improvement of 0.0083 corresponds to ~4 samples changing prediction on n_val=484. The standard error at current rate 0.0207 is ~sqrt(0.0207*0.9793/484)\u22480.0065, so \u0394val\u22481.3 SE\u2014modest but meaningful. The proposed change reduces train error from 0.0000 to 0.0035 (less overfitting), aligning with the regularization mechanism. With 8 experiments, selection bias is present but moderate, supporting ~70-75% confidence this reflects real improvement."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction in a 484-sample validation set. With 15 experiments run, this is likely selection noise rather than a real improvement. The standard error at p\u22480.01 is ~0.0045, making this change well within normal fluctuation."
+  },
+  "15": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only 1 sample changing prediction on a 484-sample validation set. With 16 experiments already run, this creates substantial selection bias. The standard error at this error rate (~0.01) is roughly sqrt(0.01*0.99/484) \u2248 0.0045, making this improvement less than 0.5 standard errors\u2014well within noise range."
+  },
+  "16": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only 1 sample changing prediction on a 484-sample validation set. With baseline error ~0.012, the standard error is roughly sqrt(0.012*0.988/484) \u2248 0.005, making this a ~0.4 standard-error shift\u2014well within noise. After 17 experiments, selection bias strongly inflates the chance this is a lucky outlier rather than real signal."
+  },
+  "18": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only ~1 sample changing prediction out of 484, well within noise (SE \u2248 0.005). After 19 experiments, selection bias strongly inflates the chance this is a lucky fluctuation rather than real generalization improvement."
+  },
+  "22": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0021 corresponds to only 1 sample changing prediction on a 484-sample validation set. With 23 experiments already run, this is likely selection noise rather than a genuine improvement. The standard error at this error rate (~0.01) is roughly 0.005, making this ~0.4 standard errors\u2014well within noise range."
+  }
+}

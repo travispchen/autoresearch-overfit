@@ -1,0 +1,122 @@
+{
+  "1": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Changes only one hyperparameter (n_estimators from default 100 to 300), which is a minor modification. Increasing trees can reduce underfitting but adds moderate overfitting risk if selected purely on validation performance."
+  },
+  "2": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding a single hyperparameter (learning_rate=0.05). Moderate overfitting risk as learning rate is a standard tunable parameter that could be optimized to the validation set through iterative selection."
+  },
+  "3": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds two XGBoost parameters: tree_method='hist' (a training algorithm choice) and enable_categorical=True (built-in categorical handling). These are standard XGBoost features with minimal tuning surface and low overfitting risk."
+  },
+  "4": {
+    "complexity": 0.6,
+    "overfitting_risk": 0.4,
+    "reasoning": "Adds an ensemble of 3 models with different random seeds using majority voting. Moderately complex mechanism but uses fixed seeds with no new tunable hyperparameters, reducing overfitting risk somewhat."
+  },
+  "5": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Adds a single hyperparameter (max_depth=3) to the XGBoost classifier. This is a minor change with low overfitting risk since limiting tree depth is a well-known regularization technique that typically reduces model complexity."
+  },
+  "6": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change adding two standard XGBoost hyperparameters (max_depth and min_child_weight) with conservative values that actually increase regularization by limiting tree depth and requiring more samples per leaf."
+  },
+  "7": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Sets max_depth=1, creating decision stumps. This is a simplification that adds regularization by severely constraining tree complexity, reducing overfitting risk rather than increasing it."
+  },
+  "8": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change adding a single hyperparameter (n_estimators=50). This is a well-known XGBoost parameter with low overfitting risk since 50 estimators is relatively conservative."
+  },
+  "9": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Changes the XGBoost booster type from default (gbtree) to 'dart', which is a built-in alternative boosting method. This is a single parameter change with no new hyperparameters introduced, representing low complexity and moderate overfitting risk as DART has dropout regularization."
+  },
+  "10": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Changes the XGBoost booster type from default 'gbtree' to 'gblinear', switching from tree-based to linear model. This is a fundamental algorithmic change but adds no new hyperparameters, creating moderate overfitting risk through model selection."
+  },
+  "11": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds a single well-known L2 regularization parameter (reg_lambda=1.0) to XGBoost, which is a standard regularization technique with minimal added complexity and actually reduces overfitting risk."
+  },
+  "12": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds two standard XGBoost regularization parameters (subsample and colsample_bytree) at reasonable values. These are well-known techniques that reduce overfitting rather than increase it."
+  },
+  "13": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change adding a single hyperparameter (learning_rate=0.1) with a common default value. Low overfitting risk as it's a well-known regularization-related parameter with standard value."
+  },
+  "14": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Minor change: sets n_estimators=10 (fewer than XGBoost's default 100), which actually reduces model capacity but represents a specific hyperparameter choice that could be tuned to the validation set."
+  },
+  "15": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change setting n_estimators=5 (very low), which reduces model capacity. However, this specific value could be overfit to validation performance through trial-and-error selection."
+  },
+  "17": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds two XGBoost parameters: enable_categorical=True and tree_method='hist'. These are standard configuration options that change how the model handles data, not introducing new hyperparameters to tune, with minimal overfitting risk."
+  },
+  "18": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Adds two standard XGBoost hyperparameters (max_depth=10, n_estimators=3). Very low n_estimators (3) is unusual and likely underfits, but max_depth=10 could overfit on small datasets."
+  },
+  "19": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.0,
+    "reasoning": "Sets n_estimators=1, which is a single hyperparameter change that dramatically reduces model capacity. This decreases complexity and overfitting risk by limiting the ensemble to one tree."
+  },
+  "20": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change: explicitly sets n_estimators=50 (likely was default anyway). Adds one hyperparameter that could be tuned, but this specific value is a common default with low overfitting risk."
+  },
+  "21": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.5,
+    "reasoning": "Minor change adding a single hyperparameter (max_depth=10) to XGBoost. Moderate overfitting risk since constraining tree depth typically reduces overfitting, but the specific value could have been selected by observing validation performance."
+  },
+  "22": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.4,
+    "reasoning": "Changes the booster from default 'gbtree' to 'gblinear', which is a simpler linear model rather than tree-based. This is a single parameter change with moderate overfitting risk since linear models may underfit on some tasks but the choice could be tuned to the validation set."
+  },
+  "23": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds a single standard regularization parameter (reg_lambda=1.0) to XGBoost, which is a well-known L2 regularization technique. This introduces minimal complexity and actually reduces overfitting risk rather than increasing it."
+  },
+  "24": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.2,
+    "reasoning": "Adds two standard XGBoost regularization parameters (subsample and colsample_bytree) with conservative values of 0.8, which are well-known techniques for reducing overfitting rather than increasing it."
+  },
+  "25": {
+    "complexity": 0.3,
+    "overfitting_risk": 0.3,
+    "reasoning": "Minor change adding a single standard hyperparameter (learning_rate=0.1) to XGBoost, which is the default value anyway. Low complexity and low overfitting risk as this is a well-known parameter with no new degrees of freedom introduced."
+  }
+}

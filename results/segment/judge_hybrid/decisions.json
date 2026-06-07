@@ -1,0 +1,26 @@
+{
+  "2": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0043 corresponds to only ~1 sample changing prediction and is 0.52 sigma_val, well below the noise floor. With 3 experiments already run, this is likely selection bias from random validation set fluctuation rather than a true generalization improvement."
+  },
+  "3": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0043 is only 0.52 sigma_val (half the noise floor) and corresponds to ~1 sample changing prediction. With 4 experiments already run, this is likely selection noise rather than a real improvement."
+  },
+  "8": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0043 corresponds to only ~1 sample changing prediction and is 0.52 sigma_val (half the bootstrap noise floor). With 8 experiments already run, this magnitude of improvement is likely selection noise rather than a real generalization gain."
+  },
+  "9": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0087 is only 1.03\u00d7 the bootstrap noise floor (sigma_val=0.0084), meaning it's barely distinguishable from random validation-set fluctuation. With 9 experiments already run, selection bias likely inflates this marginal signal, and both configs already overfit (train error = 0)."
+  },
+  "14": {
+    "p_real": 0.15,
+    "reasoning": "The improvement of 0.0043 is only ~0.5\u00d7 the bootstrap noise floor (sigma_val=0.0084), corresponding to just 1 sample changing prediction. After 14 experiments with strong selection pressure, this is likely noise rather than a genuine gain."
+  },
+  "15": {
+    "p_real": 0.25,
+    "reasoning": "The improvement of 0.0087 is barely larger than the bootstrap noise floor (sigma_val=0.0084, ratio 1.03), corresponding to only 2 samples changing predictions. With 15 experiments already run, selection bias makes this marginal signal highly suspect\u2014likely noise amplified by multiple testing."
+  }
+}
